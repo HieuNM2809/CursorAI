@@ -1,0 +1,88 @@
+WEBVTT
+
+00:00.110 --> 00:03.890
+To sign up to cassette, go to the top right on the website cursor.
+
+00:03.920 --> 00:06.650
+Com and click on the sign in button.
+
+00:06.680 --> 00:11.510
+After you've clicked this button, you can either sign in if you already have a Google account or a
+
+00:11.540 --> 00:12.140
+GitHub.
+
+00:12.140 --> 00:14.150
+If you want to do an email address, sign up.
+
+00:14.150 --> 00:15.170
+Click on the sign up.
+
+00:15.170 --> 00:20.210
+I already have a Google account, so I'm going to sign in with Google by clicking the Google button.
+
+00:26.630 --> 00:30.860
+After signing in to your account, you'll see a couple of basic settings such as your name and also
+
+00:30.890 --> 00:32.120
+your model usage.
+
+00:32.120 --> 00:36.380
+I want to draw your attention to the model usage because this is quite important if you start getting
+
+00:36.380 --> 00:37.730
+into API rate limits.
+
+00:37.730 --> 00:43.580
+So you can see, for example, out of the premium models, which is GPT four, GPT four and Claude 3.5
+
+00:43.610 --> 00:43.970
+sonnet.
+
+00:43.970 --> 00:51.260
+At this time, I've used 824 out of my 1000 requests, so if I was to use up a thousand requests, I'd
+
+00:51.260 --> 00:53.090
+have to buy additional requests.
+
+00:53.090 --> 00:58.280
+When using cursor, you get an unlimited amount when you buy the Pro subscription.
+
+00:58.280 --> 01:00.860
+For the smaller models, such as GPT four or mini.
+
+01:00.860 --> 01:04.280
+So that is one consideration that you'll want to be bearing in mind.
+
+01:04.280 --> 01:08.900
+And also, if you run out of requests, you can buy the number of false requests.
+
+01:08.900 --> 01:13.880
+So I can add on an additional 1500 requests for $20 a month.
+
+01:13.880 --> 01:18.380
+My suggestion would be to trial cursor for at least a week or two weeks.
+
+01:18.380 --> 01:23.540
+Instead of using something like VSCode, give it a bit of quality time to really test whether this tool
+
+01:23.540 --> 01:25.550
+is going to speed up your development workflow.
+
+01:25.550 --> 01:30.290
+To download cursor, all you have to now do is click on the top right button, which will take you to
+
+01:30.320 --> 01:33.170
+download, and it will download your relevant installer.
+
+01:33.200 --> 01:34.850
+Given your operating system.
+
+01:34.880 --> 01:41.390
+After you've downloaded it, follow the setup instructions and remember to import any VSCode extensions
+
+01:41.390 --> 01:43.940
+that you have so that you can utilize those.
+
+01:43.940 --> 01:48.020
+In the next video, we'll go over the recommended settings so you can get the most out of cursor.

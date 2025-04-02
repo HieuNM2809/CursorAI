@@ -1,0 +1,67 @@
+WEBVTT
+
+00:00.000 --> 00:00.270
+All right.
+
+00:00.270 --> 00:00.870
+Welcome back.
+
+00:00.870 --> 00:05.670
+So in this video we're going to have a quick look at how you can add custom API keys into your cursor
+
+00:05.670 --> 00:06.330
+setup.
+
+00:06.360 --> 00:09.030
+Go to cursor at the top click on settings.
+
+00:09.030 --> 00:10.500
+Go to Cursor Settings.
+
+00:10.500 --> 00:13.350
+And then what you'll want to do is go to the models page.
+
+00:13.350 --> 00:19.020
+Inside the models page you can see you can add different types of keys and anthropic API key, a Google
+
+00:19.020 --> 00:21.000
+API key, or an Azure API key.
+
+00:21.060 --> 00:27.480
+Now all you have to do is take your API key from the provider, and then you can add this API key on.
+
+00:27.480 --> 00:29.610
+And then you'll just have to hit this here.
+
+00:29.640 --> 00:35.370
+Now if you're using Cursor Pro, you don't need to use your API key unless you're using custom models.
+
+00:35.400 --> 00:40.680
+Now the point I'll just make on this is you should only use an OpenAI API key, or an anthropic, or
+
+00:40.710 --> 00:44.220
+a Google or Azure key if you're not using Cursor Pro.
+
+00:44.250 --> 00:49.170
+If you're using Cursor Pro, I really wouldn't recommend using an API key.
+
+00:49.200 --> 00:51.450
+It can be slightly more expensive.
+
+00:51.450 --> 00:57.030
+And also, for example, some of the features, such as the composer mode is not available to use when
+
+00:57.030 --> 01:02.940
+we have a specific type of using a custom API, you'll find that the composer won't work, and the reason
+
+01:02.940 --> 01:06.750
+why that it won't work is that it's using the custom API key.
+
+01:06.750 --> 01:07.620
+So composer.
+
+01:07.620 --> 01:13.050
+If you want to use more advanced features like composer, you can't use an API key.
+
+01:13.140 --> 01:17.820
+Um, and I really would recommend using composer and we'll get into that later on in the lessons.

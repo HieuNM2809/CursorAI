@@ -1,0 +1,271 @@
+WEBVTT
+
+00:00.000 --> 00:00.300
+All right.
+
+00:00.300 --> 00:00.840
+Welcome back.
+
+00:00.840 --> 00:04.890
+So in this file we have two imports pandas and numpy.
+
+00:04.890 --> 00:06.270
+And we have some data.
+
+00:06.270 --> 00:11.130
+And what we've done is we've added some different comments that we would like the tab autocomplete to
+
+00:11.160 --> 00:14.130
+go through and perform operations on this data frame.
+
+00:14.130 --> 00:19.500
+So for example we can just go here and then we can use the tab completion to save the file to CSV.
+
+00:19.530 --> 00:22.860
+And if we go and here and you can just see we can just keep tabbing.
+
+00:22.860 --> 00:28.140
+And then if I go down and go in here again I can also do some tabs.
+
+00:28.140 --> 00:31.830
+And again you can see it's not completely perfect but it's getting the rough gist.
+
+00:31.860 --> 00:33.120
+We've got a mistake here.
+
+00:33.120 --> 00:35.340
+Let's see if cursor can actually pick this up.
+
+00:35.340 --> 00:40.440
+And this is a testament to seeing if we can actually figure out if this thing is going to work.
+
+00:40.440 --> 00:44.040
+And it doesn't look like it knows that there's a typo in the variable name.
+
+00:44.070 --> 00:46.830
+Let's have a look and see if cursor picks this up.
+
+00:46.830 --> 00:52.320
+So in the in here, what I'm showing you here is that the AI code completion is not working.
+
+00:52.320 --> 00:54.210
+If it's already generated the code.
+
+00:54.240 --> 00:54.450
+Right.
+
+00:54.480 --> 00:57.120
+And that might be something you want to have a look at.
+
+00:57.120 --> 01:03.570
+So don't take cursor as gospel truth But you'll see if we delete the code and then we we do it.
+
+01:03.600 --> 01:05.250
+It actually does give us the right result.
+
+01:05.250 --> 01:10.530
+So again this could be something that you want to be thinking about is don't always necessarily just
+
+01:10.530 --> 01:13.500
+follow it if you've already got code that's existing.
+
+01:13.500 --> 01:19.770
+And then again, the other thing I want to show you with Tab is for example, you can see we have named
+
+01:19.770 --> 01:20.790
+this data frame.
+
+01:20.790 --> 01:27.480
+Well, if we were to name this DF ten then what happens is we're now going to end up with a lot of these
+
+01:27.480 --> 01:29.190
+where there is not defined.
+
+01:29.190 --> 01:34.170
+And I could do something like this where if I do df and I do DF ten.
+
+01:34.530 --> 01:36.060
+Watch what happens here.
+
+01:36.060 --> 01:40.320
+So now that we've got a lot of errors in the code, let's have a look at what it's going to do.
+
+01:40.320 --> 01:41.610
+So actually look at this.
+
+01:41.610 --> 01:42.030
+So df.
+
+01:42.420 --> 01:42.780
+DF.
+
+01:43.140 --> 01:44.250
+DF temp tab.
+
+01:44.280 --> 01:44.910
+Tab tab.
+
+01:44.910 --> 01:50.580
+So again cursor is able to detect that all of these should now be DF ten.
+
+01:50.580 --> 01:54.690
+So again that's the second point around this tab system.
+
+01:54.690 --> 01:58.170
+You don't just have to necessarily go to that file.
+
+01:58.170 --> 02:04.260
+If you change a variable name it will actually go and pick up on some of the errors for you that you
+
+02:04.260 --> 02:06.570
+can automatically then start to fill in.
+
+02:06.600 --> 02:12.690
+So if you change a variable in one file and then later down the line in that same file, you have the
+
+02:12.690 --> 02:13.980
+variable that was called.
+
+02:13.980 --> 02:16.650
+And you know you need to go and update those variable references.
+
+02:16.650 --> 02:19.110
+Cursor is clever enough to pick up on those.
+
+02:19.950 --> 02:23.790
+Additionally, if you look at the top, we could add on a extra bit to the comment.
+
+02:23.790 --> 02:26.610
+So add three extra columns.
+
+02:29.430 --> 02:30.690
+With random data.
+
+02:30.720 --> 02:32.580
+Experience bonus department.
+
+02:32.580 --> 02:33.690
+And then you'll see here.
+
+02:33.690 --> 02:37.320
+Then we can just tab and we can add that data in as well.
+
+02:37.320 --> 02:39.240
+Instead of using specific comments.
+
+02:39.240 --> 02:44.670
+What we can do is we can make a very expressive function name about what we want to achieve.
+
+02:44.670 --> 02:52.770
+So I can say def calculate today's date versus birthday.
+
+02:53.730 --> 02:58.440
+And then again notice how we've got some errors here with the date time.
+
+02:58.440 --> 03:01.500
+So if we're just going to have a look maybe we could go up here.
+
+03:01.500 --> 03:04.950
+And then you can see it decides that it needs to import the birth time.
+
+03:04.950 --> 03:09.140
+And then the other things that we've got which are errors, is we could also add type hints.
+
+03:09.140 --> 03:12.410
+So we take in a date time and we return a boolean.
+
+03:12.410 --> 03:16.040
+And then we also have the ability to add on additional functions.
+
+03:16.040 --> 03:21.500
+And because we're aware of this as the function we've got, we could say add on some helper functions.
+
+03:21.500 --> 03:26.930
+If you now create a new Python file called function declarations, we could have a look at how, instead
+
+03:26.930 --> 03:31.400
+of writing Python comments to create effective Python functions or classes, we could actually just
+
+03:31.400 --> 03:35.990
+make the name of the function really descriptive and expressive for what that function needs to do.
+
+03:35.990 --> 03:41.990
+So for example, we could say def calculate today's birthday versus birthday for the calculate date.
+
+03:41.990 --> 03:48.200
+And then again we've got these problems here where what we need to do is then we then need to go to
+
+03:48.230 --> 03:48.800
+the top here.
+
+03:48.800 --> 03:52.220
+And then you can then see that the tab decides to import the date time.
+
+03:52.220 --> 03:54.890
+So we've calculated today's date versus the birth date.
+
+03:54.890 --> 03:57.350
+And also it's well worth thinking about.
+
+03:57.350 --> 04:04.070
+The more code you write, the the more expressive the tab generation is going to be.
+
+04:04.070 --> 04:08.390
+Because cursor is actually indexing your entire code base in real time.
+
+04:08.390 --> 04:13.870
+And it's also using what kinds of files you have open, what kinds of files you've edited recently.
+
+04:13.870 --> 04:17.860
+So it's using all of that additional context to help drive the tab completion.
+
+04:17.860 --> 04:23.230
+So you can see now if I say create some helper functions for the tab completion is going to be very
+
+04:23.230 --> 04:23.860
+much driven.
+
+04:23.860 --> 04:25.510
+And you can see we've got a hallucination here.
+
+04:25.540 --> 04:29.980
+Maybe we want to say something like is is even or like is odd.
+
+04:29.980 --> 04:34.330
+So maybe a certain month might be a better way of doing this in certain age range.
+
+04:34.330 --> 04:39.340
+We could also say, and you can see this isn't perfect, but we could say something like is in certain
+
+04:39.340 --> 04:40.000
+month.
+
+04:40.000 --> 04:43.360
+And then again, we've got a certain month that we can then do.
+
+04:43.360 --> 04:46.960
+And you've got the generation start to get a bit more useful.
+
+04:46.960 --> 04:52.690
+Now I will say the more code you have, the better you're going to get in terms of in terms of this
+
+04:52.690 --> 04:53.380
+code generation.
+
+04:53.380 --> 04:56.980
+You can see here it's also recommending that we have these additional helper functions.
+
+04:56.980 --> 05:03.310
+So just be aware that the more code that you produce and the more files that you have edited and the
+
+05:03.310 --> 05:09.610
+more code that you have in your code base is going to help drive the prediction of the tab autocomplete.
+
+05:09.640 --> 05:10.240
+Cool.
+
+05:10.270 --> 05:10.630
+All right.
+
+05:10.630 --> 05:11.980
+I'll see you all in the next one.

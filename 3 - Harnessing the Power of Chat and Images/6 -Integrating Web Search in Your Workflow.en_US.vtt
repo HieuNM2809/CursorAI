@@ -1,0 +1,97 @@
+WEBVTT
+
+00:00.020 --> 00:00.950
+Hey welcome back.
+
+00:00.950 --> 00:05.360
+And this is just a quick video talking about some other different types of app references that you might
+
+00:05.360 --> 00:06.380
+want to consider.
+
+00:06.500 --> 00:09.380
+There is folders and files that we've had a look at.
+
+00:09.620 --> 00:12.710
+There is also codebase which we use your entire codebase.
+
+00:12.740 --> 00:13.970
+We've had a look at docs.
+
+00:13.970 --> 00:20.450
+You could also use git repositories or the web, and the web could be used for finding customer API
+
+00:20.480 --> 00:21.440
+documentation.
+
+00:21.440 --> 00:23.900
+Or you could say, you know, like you know what?
+
+00:23.930 --> 00:31.550
+What has happened, what has happened recently within a chain, right?
+
+00:31.580 --> 00:34.220
+So you could even ask a generic web query.
+
+00:34.220 --> 00:38.570
+But the important thing is that cursor will actually make a query.
+
+00:38.600 --> 00:41.750
+It will visit those web pages, it will read those web pages.
+
+00:41.750 --> 00:46.100
+And then you can see it's actually providing a more detailed response.
+
+00:46.100 --> 00:48.380
+So you can use this for both web based search.
+
+00:48.440 --> 00:51.260
+But you can also use this for pulling in custom documentation.
+
+00:51.260 --> 00:52.790
+So you could provide web links.
+
+00:52.790 --> 00:55.070
+And then it could be able to read those web links.
+
+00:55.100 --> 00:56.480
+Let's give that a test right now.
+
+00:56.480 --> 00:59.210
+So I've got at web and then I've got an article here.
+
+00:59.210 --> 01:00.350
+So you can see this.
+
+01:00.560 --> 01:06.260
+So you can add in an article and say what is happening in this article.
+
+01:10.310 --> 01:13.250
+So it talks about blundering and games startup failures.
+
+01:13.250 --> 01:15.740
+So obviously this is the full article.
+
+01:15.770 --> 01:18.770
+Other things you could do is pull in custom documentation.
+
+01:18.770 --> 01:23.900
+If there's a specific couple of web pages that you're going to need within your projects to help make
+
+01:23.930 --> 01:30.320
+sure that you've got the right documentation, you could include these via web or app links references.
+
+01:30.320 --> 01:36.080
+The important thing here is that might be more accurate than, for example, always indexing the entire
+
+01:36.080 --> 01:40.550
+documentation because you can say these specific files make sure to include these.
+
+01:40.580 --> 01:40.910
+All right.
+
+01:40.910 --> 01:41.360
+Cool.
+
+01:41.390 --> 01:41.930
+The next one.

@@ -1,0 +1,94 @@
+WEBVTT
+
+00:00.020 --> 00:01.010
+Everyone is James here?
+
+00:01.010 --> 00:07.100
+This is just a quick video where I'm going to be giving you 100% off my personal SAS development boilerplate.
+
+00:07.100 --> 00:11.630
+The reason I'm giving this to you is because I want to give back to the developer community, and I
+
+00:11.630 --> 00:16.760
+think it's really great for you to have an easy boilerplate that will allow you to get started quickly
+
+00:16.760 --> 00:17.690
+on new projects.
+
+00:17.690 --> 00:19.370
+So what is this boilerplate come with?
+
+00:19.400 --> 00:23.750
+Well, this comes with a local super base development stack so that you'll be able to automatically
+
+00:23.750 --> 00:27.620
+build your entire setup from authentication payments and develop locally.
+
+00:27.620 --> 00:32.990
+Also, we have things such as TypeScript support, so we'll automatically regenerate all of the types
+
+00:32.990 --> 00:35.630
+whenever you make a change to your local database.
+
+00:35.630 --> 00:40.220
+Also, the boilerplate comes bundled with sentry integration, so you can easily detect and monitor
+
+00:40.220 --> 00:42.680
+edge cases and bugs directly in real time.
+
+00:42.680 --> 00:46.190
+This allows you to catch errors early so that your customers aren't going to get upset.
+
+00:46.190 --> 00:50.180
+There's also a stripe integration so that you'll be developing easily with stripe.
+
+00:50.180 --> 00:51.920
+It's already set up out of the box for you.
+
+00:51.950 --> 00:56.780
+With inside the actual repository, there is a prompts folder that allows you to easily automate lots
+
+00:56.780 --> 00:58.880
+of different tasks with markdown files.
+
+00:58.880 --> 01:03.320
+As well as that, we also provide jest tests and playwright tests inside of this boilerplate.
+
+01:03.320 --> 01:09.350
+You can also deploy these directly to GitHub actions so that you can test your application before deploying
+
+01:09.380 --> 01:09.890
+to production.
+
+01:09.890 --> 01:13.880
+This is just a promotional discount that only applies to people that have bought my Udemy course.
+
+01:13.880 --> 01:15.860
+I just want to give you a great thank you for this.
+
+01:15.860 --> 01:21.410
+And also, I think it's really unfair that all of these other Boilerplates are charging $149 and they're
+
+01:21.410 --> 01:22.370
+not cursor friendly.
+
+01:22.370 --> 01:26.900
+I've put a lot of time into building this production grade stack, and I want to keep this up to date,
+
+01:26.900 --> 01:31.910
+and I really want to make sure that this is the best stack for cursor and Superbase and Shadchan.
+
+01:31.940 --> 01:37.370
+To gain access to the boilerplate for free, just visit cursor devkit.com and then enter the Udemy Free
+
+01:37.400 --> 01:38.240
+Promotion code.
+
+01:38.240 --> 01:42.620
+When you go into stripe checkout, you'll get 100% off, so I recommend going for the most expensive
+
+01:42.620 --> 01:43.010
+plan.
+
+01:43.040 --> 01:46.190
+I'd love to get your feedback on this and enjoy the boilerplate.

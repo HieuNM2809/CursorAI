@@ -1,0 +1,40 @@
+WEBVTT
+
+00:00.230 --> 00:04.550
+In this section, you're going to cover some best practice workflows so that you can get more out of
+
+00:04.550 --> 00:04.940
+cursor.
+
+00:04.940 --> 00:09.620
+So regardless of what type of programming language you're using, you'll be able to maximize the outputs
+
+00:09.620 --> 00:13.970
+you get from using any AI code generation tool, including cursor.
+
+00:14.000 --> 00:19.040
+You'll explore best practices like using different models for planning software development workflow
+
+00:19.040 --> 00:23.960
+tasks, versus using a different model for actually executing the code generation and doing the work.
+
+00:23.990 --> 00:28.610
+You'll also find out how to easily discover what is the best model at the current time, so that you
+
+00:28.610 --> 00:30.890
+can easily switch to that model inside of cursor.
+
+00:30.920 --> 00:35.030
+Also, we'll look at why adding comments is really important to improving cursors.
+
+00:35.030 --> 00:36.560
+Code base indexing feature.
+
+00:36.590 --> 00:41.360
+You'll also learn how to easily configure cursor so that you can tell it to avoid making the same mistakes
+
+00:41.360 --> 00:42.950
+when you run into similar problems.
+
+00:42.980 --> 00:47.840
+Also, we'll show you how to easily analyze code for your own learning purposes and many more.

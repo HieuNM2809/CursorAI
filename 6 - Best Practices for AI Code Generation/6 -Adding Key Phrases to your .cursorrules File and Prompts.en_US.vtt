@@ -1,0 +1,34 @@
+WEBVTT
+
+00:00.140 --> 00:00.830
+Welcome back.
+
+00:00.830 --> 00:05.630
+This is just a quick video talking about some of the key phrases I found when using cursor to improve
+
+00:05.630 --> 00:06.170
+the outputs.
+
+00:06.170 --> 00:11.120
+So for example, row prompting and telling cursor to act like a ten-x engineer really does seem to have
+
+00:11.120 --> 00:12.770
+a good impact on the code quality.
+
+00:12.770 --> 00:17.540
+Also, you can use emotional prompting such as please don't be lazy or my job depends on doing this
+
+00:17.540 --> 00:18.470
+task really well.
+
+00:18.470 --> 00:24.590
+I've also found providing direction to be very useful in both prompts and also the cursor rules files.
+
+00:24.590 --> 00:30.410
+So for example saying be incredibly extensive and detailed or make sure to include error handling and
+
+00:30.410 --> 00:31.310
+all scenarios.
+
+00:31.310 --> 00:36.380
+Have a play around with these prompts in your projects and see what gives you better results.

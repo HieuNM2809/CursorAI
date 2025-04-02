@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.290 --> 00:04.370
+In this video, we're going to have a look at how you can easily identify top performing models from
+
+00:04.370 --> 00:05.270
+a single table.
+
+00:05.300 --> 00:10.520
+There's a website called Chatbot Arena Board, which is LM arena AI, and this provides you with an
+
+00:10.520 --> 00:15.800
+extensive overview of all the different models that are currently top performers with their Elo rankings.
+
+00:15.800 --> 00:20.660
+We can also filter this for coding to get a better understanding as to what models are doing well for
+
+00:20.660 --> 00:21.620
+code generation.
+
+00:21.620 --> 00:28.190
+So go to the category and click on coding and then this will reload the Gradio table showing you the
+
+00:28.190 --> 00:30.200
+best performing models for coding.
+
+00:30.200 --> 00:33.110
+Given some specific data sets that they've been evaluating against.
+
+00:33.110 --> 00:38.000
+If we scroll down, you'll see that one preview apparently is the top performing model secondary to
+
+00:38.180 --> 00:38.720
+one mini.
+
+00:38.720 --> 00:41.660
+And then we also have for example chat 3.5 sonnet.
+
+00:41.690 --> 00:47.390
+Now I do recommend you actually give cloud 3.5 sonnet a go if you're doing full stack web development,
+
+00:47.390 --> 00:51.650
+because it works really well with radix Shad, CDN and Next.js app router.
+
+00:51.650 --> 00:56.090
+However, I'm also very tool agnostic and I would recommend that you keep an eye on this leaderboard
+
+00:56.090 --> 01:01.430
+over time so that you can switch inside of cursor to use whatever model is the most powerful in terms
+
+01:01.430 --> 01:02.330
+of code generation.
+
+01:02.360 --> 01:07.310
+Another website that's also good to keep in mind is the code generation on human eval dataset.
+
+01:07.340 --> 01:11.630
+If we scroll down and have a look, you can see that at the moment zero one mini is currently performing
+
+01:11.630 --> 01:12.410
+the best also.
+
+01:12.410 --> 01:15.290
+Then secondary to zero one preview GPT four zero.
+
+01:15.320 --> 01:19.040
+Then we have things like claw 3.5, sonnet and also fractal research.
+
+01:19.040 --> 01:23.150
+So don't just use one data set to decide what model to switch to.
+
+01:23.180 --> 01:27.770
+And also just because the evaluations are higher for zero one mini, you should have a play around with
+
+01:27.770 --> 01:32.240
+a couple of the best performing models to get a sense of style and flavor for what will give you the
+
+01:32.240 --> 01:36.590
+best results, I'll put both of these links inside of the video so that you can easily access them.

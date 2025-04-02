@@ -1,0 +1,454 @@
+WEBVTT
+
+00:00.020 --> 00:04.160
+In this video, we're going to have a look at the composer feature more inside of cursor.
+
+00:04.190 --> 00:10.730
+We're also going to build a dashboard layout for an e-commerce web page using composer, strictly inside
+
+00:10.730 --> 00:12.530
+of a Next.js application.
+
+00:12.530 --> 00:14.870
+You can see here we have some cursor rules.
+
+00:14.870 --> 00:21.110
+And we've also told the cursor that the Next.js code is going to be maintained inside the client folder.
+
+00:21.110 --> 00:24.200
+To open composer on a mac, hit Command Shift I.
+
+00:24.230 --> 00:27.860
+You can do this on windows specifically with control shift I.
+
+00:27.890 --> 00:31.910
+Now we're going to go and create a new single composer.
+
+00:31.910 --> 00:34.730
+So you can always revisit your previous composers.
+
+00:34.730 --> 00:38.030
+Also you can add files to each composer.
+
+00:38.060 --> 00:40.340
+You might want to bring in multiple files.
+
+00:40.340 --> 00:44.330
+We're using composer to generate multiple bits of code.
+
+00:44.330 --> 00:47.120
+For now we're going to create an e-commerce dashboard layout.
+
+00:47.120 --> 00:55.430
+So say I want to create an e-commerce dashboard layout with the following functionality.
+
+00:55.670 --> 01:03.480
+We'll say add to cart Multiple items of the same to cart.
+
+01:03.510 --> 01:04.590
+Quantity.
+
+01:05.790 --> 01:06.990
+Quantity.
+
+01:07.380 --> 01:09.600
+And then we're going to let cursor do its thing.
+
+01:09.600 --> 01:13.350
+So what happens is when you do this cursor will make a plan.
+
+01:13.350 --> 01:14.610
+And you can see that on the right.
+
+01:14.610 --> 01:18.120
+And on the left hand side you can see all of the files that cursor is creating.
+
+01:18.120 --> 01:21.810
+So we've got this product called TSX, the product list TSX.
+
+01:21.930 --> 01:26.790
+The cart TSX and the page TSX, which has now been renamed to a dashboard.
+
+01:26.820 --> 01:33.990
+Now, if we close our composer down into an open floating composer, you can actually go and have a
+
+01:33.990 --> 01:36.240
+look at all the files that would be created.
+
+01:36.240 --> 01:41.310
+Open the floating version of that and you can see if you go here, you can actually see all the files
+
+01:41.310 --> 01:42.930
+that it would naturally create.
+
+01:42.930 --> 01:49.260
+And you can see the changes if you want, save the file, go and have a look at those files before.
+
+01:49.260 --> 01:55.590
+The benefit of doing this is that if you need to delete these files, you don't necessarily have to
+
+01:55.620 --> 01:56.490
+tidy up the project.
+
+01:56.490 --> 02:02.210
+Obviously you can accept them and we'll see in a second how we can accept all the files and just do
+
+02:02.210 --> 02:03.500
+that in one go.
+
+02:03.530 --> 02:07.460
+Now we are going to run into problems when we load this Next.js application.
+
+02:07.460 --> 02:09.680
+So you can see here we've got two imports.
+
+02:09.710 --> 02:13.760
+If I try and run this Next.js application let's have a look and see what happens.
+
+02:13.790 --> 02:17.420
+So we're running into this issue where we can't import a specific button.
+
+02:17.510 --> 02:21.530
+What we can do is we can import these directly into composer to then fix these.
+
+02:21.530 --> 02:26.960
+And this will be a specifically a CDN problem where we actually need to install Shad CDN inside the
+
+02:26.960 --> 02:29.750
+project, and we need to import some Shad CDN components.
+
+02:29.780 --> 02:32.390
+Let's have a look at how we can do this using composer.
+
+02:32.690 --> 02:37.910
+One way to do this is to gather up all of the different problems inside of the entire project with the
+
+02:37.910 --> 02:42.020
+problems tab, and just go back to composer window and copy these in.
+
+02:42.020 --> 02:45.710
+So I've copied one and then I like to do a floating composer for this.
+
+02:45.710 --> 02:50.300
+And I'm just going to go through and copy all of these problems directly into composer.
+
+02:51.260 --> 02:56.450
+And then we can add the product card and then we can add the sidebar.
+
+02:56.450 --> 03:00.240
+So it's basically adding all of the problems that we find inside.
+
+03:00.240 --> 03:04.920
+And then we've got a floating window of composer telling us about all of these different things, and
+
+03:04.920 --> 03:06.720
+then you've got these imports as well.
+
+03:06.750 --> 03:08.940
+So let's have a look so we can accept all of these.
+
+03:08.940 --> 03:11.880
+And then we can see that we haven't fixed these issues.
+
+03:11.880 --> 03:16.500
+The reason probably for this is that we need to install shared components.
+
+03:16.680 --> 03:18.180
+So let's have a look.
+
+03:18.210 --> 03:22.020
+How do I set up shared CDN.
+
+03:22.380 --> 03:25.050
+And we'll get some steps for how we can set that up.
+
+03:25.560 --> 03:28.980
+So again we've got these steps here I'm going to run these on my terminal.
+
+03:29.460 --> 03:32.100
+And I'm just going to walk through the shadow CDN setup.
+
+03:32.100 --> 03:33.570
+So I'm just doing that.
+
+03:33.750 --> 03:40.860
+And then after I've done that and we need to install the dependencies we've got the tailwind base.
+
+03:40.860 --> 03:43.350
+Then we need to add on the button the.
+
+03:43.350 --> 03:47.550
+After running those imports for shadow CDN we can now add these to our cart.
+
+03:47.850 --> 03:50.160
+Now we can also do the quantities.
+
+03:50.550 --> 03:52.380
+So I can add lots of these products.
+
+03:52.560 --> 03:55.560
+And as well as that I can also remove these from my cart.
+
+03:55.560 --> 03:56.910
+So that's really nice.
+
+03:56.950 --> 04:01.960
+Now, one thing I want to talk about is now that we've got these files created, we can start editing
+
+04:01.960 --> 04:05.050
+the UI and improving that using cursor as well.
+
+04:05.080 --> 04:07.450
+And specifically looking at how we do that in composer.
+
+04:07.450 --> 04:10.690
+So let's go back to the Next.js application inside of cursor.
+
+04:10.690 --> 04:13.690
+And let's actually make these e-commerce dashboard page look really nice.
+
+04:13.690 --> 04:15.370
+So I'm going to make a new composer.
+
+04:15.370 --> 04:17.230
+I'm going to add the product card the product list.
+
+04:17.230 --> 04:23.950
+So now I'm adding all of these individual files directly to composer so that we can do a nice rewrite.
+
+04:24.040 --> 04:32.410
+I want to make the e-commerce dashboard page really good and have a great UI.
+
+04:32.950 --> 04:41.080
+The shopping cart icon that is like a modal make this UI really slick and streamlined.
+
+04:42.280 --> 04:48.490
+So what we've done is we've generated all the files and added these to the composer reference, and
+
+04:48.490 --> 04:55.930
+then it's using these files to then basically change the page TSX and it's added on some styling It's
+
+04:55.950 --> 05:00.990
+also changing the product list and the product card and also the cart components.
+
+05:00.990 --> 05:03.270
+So it's rewriting these files dynamically.
+
+05:03.270 --> 05:06.240
+Given our instructions, I think everything's fine.
+
+05:06.270 --> 05:11.310
+It's also told us that we need to install Lasset react, so we'll make sure that we have that installed.
+
+05:11.310 --> 05:15.390
+I'm going to click Accept All, and then I'm going to go back to the Next.js application and have a
+
+05:15.390 --> 05:17.340
+look at how that looks on the front end.
+
+05:17.370 --> 05:17.940
+Okay.
+
+05:17.940 --> 05:18.240
+Cool.
+
+05:18.240 --> 05:20.370
+So it looks like we're getting a couple more errors.
+
+05:20.520 --> 05:26.550
+And you can see here we've got a scroll area component which has not been properly installed.
+
+05:26.580 --> 05:30.540
+And also if we look at the rest of the code we've probably got a couple more errors.
+
+05:30.540 --> 05:35.400
+So we can go back into composer, feed these errors in and figure out what we should be doing next.
+
+05:36.000 --> 05:37.500
+So I'm going to hit command shift.
+
+05:37.500 --> 05:41.640
+I, I'm going to bring this to a floating composer.
+
+05:41.790 --> 05:47.130
+And then I'm just going to go and copy all of these TypeScript errors by clicking these and copying
+
+05:47.130 --> 05:49.140
+these directly from the problems tab.
+
+05:49.140 --> 05:54.060
+And then we can then use composer in the floating window to figure out exactly how we fix these.
+
+05:54.060 --> 05:58.960
+And you can see it's probably telling us we need to install Shatkin UI and then we need to run these
+
+05:58.960 --> 05:59.710
+commands as well.
+
+05:59.710 --> 06:03.670
+So I'm going to run these commands in my terminal and then we'll see if that's fixed the application.
+
+06:03.700 --> 06:03.970
+All right.
+
+06:03.970 --> 06:05.830
+So I've run those commands in my terminal.
+
+06:05.830 --> 06:09.370
+And you can see I don't have any problems and the problems tabs anymore.
+
+06:09.370 --> 06:14.470
+So let's go and restart the Next.js server and have a look at that inside of the browser.
+
+06:14.500 --> 06:14.950
+All right.
+
+06:14.950 --> 06:15.220
+Cool.
+
+06:15.220 --> 06:17.170
+So it looks like we've got a slightly better UI.
+
+06:17.200 --> 06:20.380
+I have the ability to add multiple products to my car.
+
+06:20.410 --> 06:24.130
+I've got this really nice ability to have a cart that appears on the side.
+
+06:24.160 --> 06:26.050
+And when I hit escape it will close that down.
+
+06:26.050 --> 06:28.030
+And you can see we've also got a checkout.
+
+06:28.030 --> 06:30.880
+For example, we could add four or we could just add one product.
+
+06:30.910 --> 06:36.160
+One other thing I might want to do is I might want someone to allow them to increment or decrement the
+
+06:36.160 --> 06:39.910
+product whilst it in the car, and also when we have the delete.
+
+06:39.910 --> 06:45.610
+I also want to have a confirmation a window that pops up saying to the user, are you sure you want
+
+06:45.640 --> 06:47.110
+to delete that item from your cart?
+
+06:47.110 --> 06:49.120
+So let's implement those in composer.
+
+06:49.120 --> 06:54.530
+So I'm going to take the floating window and put it back into the control panel And then I'm going to
+
+06:54.530 --> 07:02.540
+say, I want you to allow the user to decrement or increment items.
+
+07:02.840 --> 07:03.260
+Quantity.
+
+07:03.290 --> 07:06.020
+Item quantities within the cart component.
+
+07:08.480 --> 07:19.070
+Also, I want to have a window confirmation that when a user is about to delete the item from the cart,
+
+07:20.630 --> 07:23.180
+and again, we've given two instructions here.
+
+07:23.210 --> 07:28.070
+We're now asking composer to rewrite this, and you can see it's decided to write more code that we're
+
+07:28.070 --> 07:30.770
+currently editing the cart page.
+
+07:30.800 --> 07:32.960
+And we're specifically adding some extra things.
+
+07:32.960 --> 07:37.580
+And we've also updated the dashboard with an update cart item quantity.
+
+07:37.610 --> 07:42.230
+And we also need to run this command here and add the alert dialog as well.
+
+07:42.230 --> 07:43.850
+So I'm going to run that on the terminal.
+
+07:43.850 --> 07:46.820
+I'm going to click accept all the changes.
+
+07:46.850 --> 07:49.430
+And then I'm going to close this composer down for now.
+
+07:49.490 --> 07:55.510
+And what I'm going to do now is install this package inside of Shadchan and then restart the Next.js
+
+07:55.540 --> 07:57.580
+server and see if that's fixed the problem.
+
+07:57.730 --> 08:01.990
+So installing that specifically Shadchan component has now fixed the problem.
+
+08:02.020 --> 08:02.410
+Tab.
+
+08:02.410 --> 08:05.320
+Let's restart the server and have a look on the front end.
+
+08:05.350 --> 08:06.310
+All right so it looks good.
+
+08:06.340 --> 08:07.090
+Looks like it's working.
+
+08:07.090 --> 08:08.200
+So I can add five products.
+
+08:08.200 --> 08:09.400
+I've got five in here.
+
+08:09.400 --> 08:13.240
+And you can see I can also increment or decrement each individual product.
+
+08:13.240 --> 08:15.580
+Let's also check the other feature that we were requesting.
+
+08:15.580 --> 08:17.320
+For example I want to delete this.
+
+08:17.320 --> 08:19.420
+Are you sure you want to remove this item from your cart?
+
+08:19.450 --> 08:20.500
+We can click remove.
+
+08:20.500 --> 08:22.000
+And then now the cart is empty.
+
+08:22.030 --> 08:25.000
+You can see how easy it is to implement these features.
+
+08:25.000 --> 08:27.220
+We've done this in about nine minutes of recording.
+
+08:27.220 --> 08:29.770
+And you could add lots of different feature requirements.
+
+08:29.770 --> 08:34.660
+And it's going to edit, update, create and delete different files in succession.
+
+08:34.660 --> 08:40.630
+And it will allow you to rapidly prototype your full stack applications using Cursor Composer.
+
+08:40.630 --> 08:44.380
+In the next lesson, we're going to have a look at how you can do more with composer.
+
+08:44.380 --> 08:49.870
+We will add, for example, prompts templates that are going to help us bootstrap parts of the project
+
+08:49.900 --> 08:51.370
+using composer.
+
+08:51.400 --> 08:52.840
+All right, I'll see you in the next one.

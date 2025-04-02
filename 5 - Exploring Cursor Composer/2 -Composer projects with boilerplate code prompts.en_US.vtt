@@ -1,0 +1,1009 @@
+WEBVTT
+
+00:00.110 --> 00:00.590
+Hey.
+
+00:00.590 --> 00:01.190
+Welcome back.
+
+00:01.220 --> 00:04.130
+We're going to have a look at some more advanced features of composer.
+
+00:04.160 --> 00:10.430
+One thing that I'd really like you to start thinking about as a developer is mixing shell script automations
+
+00:10.430 --> 00:13.340
+with cursor templates or prompt templates.
+
+00:13.370 --> 00:17.900
+Firstly, let's have a look at what the shell script does, and then we'll run through it line by line.
+
+00:17.900 --> 00:22.940
+Personally, as a developer, I'm really excited about new and interesting ways to make my workflows
+
+00:22.940 --> 00:23.720
+faster.
+
+00:23.750 --> 00:29.120
+One of the ways you can do this is by using a shell script automation to generate a standardized project
+
+00:29.120 --> 00:32.210
+config that you'll use for all of your Next.js applications.
+
+00:32.240 --> 00:37.820
+We'll also combine this with the Superbase local stack with the Superbase CLI, and setting that up
+
+00:37.820 --> 00:40.580
+properly so that it's all configured and ready to go.
+
+00:40.610 --> 00:44.210
+We'll bundle it with Shadchan and install a couple of node packages along the way.
+
+00:44.210 --> 00:48.470
+And what you'll end up with is something like this, where you have a client automatically created.
+
+00:48.500 --> 00:51.650
+We'll have a components with all of the Shadchan components.
+
+00:51.650 --> 00:55.760
+And then as well we also generate the types from the database automatically.
+
+00:55.760 --> 01:01.130
+And then as well as that we also add in a thing like a cursor rules file And we've also got some prompt
+
+01:01.160 --> 01:06.140
+templates that we're going to show you how you can use these prompt templates to generate entire files
+
+01:06.140 --> 01:08.720
+and folder structures using Cursors Composer.
+
+01:08.750 --> 01:10.340
+So that's the end goal.
+
+01:10.340 --> 01:11.480
+But how do we get there?
+
+01:11.510 --> 01:14.240
+Well, we firstly kill all the Docker containers.
+
+01:14.240 --> 01:16.670
+You'll need Docker and homebrew to run this setup.
+
+01:16.670 --> 01:18.680
+We then have a couple of functions.
+
+01:18.680 --> 01:22.010
+We create a project file name, which in this case is client.
+
+01:22.010 --> 01:24.890
+We then create a Next.js TypeScript application.
+
+01:24.890 --> 01:29.870
+Then we bundle that with CDN and all next themes and radix UI.
+
+01:29.900 --> 01:33.830
+Then we also install all of the CDN components asynchronously.
+
+01:33.830 --> 01:36.200
+And then after that we install Supabase.
+
+01:36.200 --> 01:38.420
+So we install some packages from Supabase.
+
+01:38.420 --> 01:42.170
+We then check to see if the Superbase CLI is installed, and if not, we install that.
+
+01:42.200 --> 01:47.960
+We go up to the root directory and then we run a superbase init which will install a superbase local
+
+01:47.960 --> 01:48.770
+environment.
+
+01:48.770 --> 01:52.460
+And once we have that local environment, we then create a migrations folder.
+
+01:52.460 --> 01:55.160
+And then we run this creating our first migration.
+
+01:55.160 --> 02:01.650
+We apply that migration here and generate type safe types from the client, and I've also included this
+
+02:01.650 --> 02:07.890
+as a separate shell script for generate Typesafe, and that's an easy way for you to add on type safety
+
+02:07.920 --> 02:10.410
+for your TypeScript clients in Superbase.
+
+02:10.440 --> 02:16.920
+After that, then we create a dot env local file and paste in this information here, which allows you
+
+02:16.920 --> 02:18.510
+to connect to the superbase stack.
+
+02:18.510 --> 02:23.160
+And then you'll also see, because we're using composer, I found composer doesn't really work too well
+
+02:23.160 --> 02:25.290
+when you've got lots of different folder structures.
+
+02:25.290 --> 02:27.540
+So a client and a back end it can work.
+
+02:27.540 --> 02:32.670
+But personally, if you're using Next.js, which is a full stack web application framework, I've personally
+
+02:32.670 --> 02:37.500
+just said that for all the cursor prompt templates for these composer templates, I'm putting them straight
+
+02:37.500 --> 02:38.640
+into the client folder.
+
+02:38.640 --> 02:43.110
+And also notice how we're adding this cursor rules directly into the client folder.
+
+02:43.140 --> 02:43.470
+Cool.
+
+02:43.470 --> 02:44.310
+So that's the setup.
+
+02:44.310 --> 02:48.750
+And then once you've run that you should have a client that's been built.
+
+02:48.750 --> 02:50.640
+And you can reuse this over and over again.
+
+02:50.640 --> 02:53.790
+And you're going to get a standardized CLI setup for Superbase.
+
+02:53.790 --> 02:59.670
+And also you're going to get a Next.js application which has a couple of unique packages bundled and
+
+02:59.700 --> 03:01.650
+all of the UI templates that go along with that.
+
+03:01.680 --> 03:04.560
+Next thing we're going to do is we're going to go into the client folder.
+
+03:04.560 --> 03:06.330
+So I'm going to open the client folder.
+
+03:06.360 --> 03:11.010
+We're going to use some of these cursor prompt templates that I recommend you have.
+
+03:11.010 --> 03:13.380
+And you can use these across multiple projects.
+
+03:13.380 --> 03:16.410
+The idea is that if you're doing the same thing over and over again.
+
+03:16.410 --> 03:21.120
+So one thing you might like to do as a developer is have standardized prompt templates that you can
+
+03:21.120 --> 03:21.630
+reuse.
+
+03:21.630 --> 03:25.290
+This means that when you're moving from project to project, you can easily copy these entire prompt
+
+03:25.290 --> 03:28.620
+files and then have exactly how you need to set up your project.
+
+03:28.620 --> 03:32.880
+You can see we've got one for the dashboard layout, where we've got one for the home page, and then
+
+03:32.880 --> 03:35.280
+we can have ones for our Superbase auth settings.
+
+03:35.280 --> 03:38.430
+We can even tell it exactly what types of files we want it to create.
+
+03:38.460 --> 03:39.750
+Standardize that process.
+
+03:39.750 --> 03:41.880
+Now let's have a look at the dashboard layout.
+
+03:41.910 --> 03:47.490
+What I'm going to do is hit command shift I, I'm going to go into composer and create a new project
+
+03:47.520 --> 03:48.900
+here and I'll call it dashboard.
+
+03:50.280 --> 03:56.430
+Then I'm going to dump in that click New Composer and then create my dashboard.
+
+03:56.970 --> 03:57.840
+And I hit enter.
+
+03:57.870 --> 04:02.560
+What's interesting is that from project to project, Kerser knows exactly what we're looking for.
+
+04:02.560 --> 04:03.520
+In the dashboard.
+
+04:03.520 --> 04:05.170
+We need to have a logo on top.
+
+04:05.200 --> 04:07.840
+Make sure that icons are smaller, the words are larger.
+
+04:07.840 --> 04:12.760
+We also need to make sure that the sidebar is collapsible, and also the main content should take up
+
+04:12.760 --> 04:13.690
+lots of the space.
+
+04:13.690 --> 04:16.600
+And we've also said that we want a user profile icons.
+
+04:16.600 --> 04:21.460
+If I go back to the control panel and create my dashboard, you'll now see that it's added on this.
+
+04:21.460 --> 04:23.770
+Here I'm just going to click Accept All.
+
+04:23.770 --> 04:25.330
+I'm going to have a look at these files.
+
+04:25.360 --> 04:26.770
+So we've got this nice sidebar.
+
+04:26.770 --> 04:27.850
+We've got a header.
+
+04:27.850 --> 04:30.820
+And we've also got a page TSX.
+
+04:30.820 --> 04:32.620
+And we've got that layout as well.
+
+04:32.620 --> 04:36.040
+So let's go and have a look at the dashboard page.
+
+04:36.070 --> 04:36.580
+All right.
+
+04:36.580 --> 04:40.360
+One problem we can see here is I've got two versions of the same dashboard.
+
+04:40.360 --> 04:44.200
+So I'm going to give the same problem back into cursor and see if it can figure it out.
+
+04:44.530 --> 04:48.580
+Now we're going to step it up a notch and I'm going to use dictation watch in the bottom right corner.
+
+04:48.940 --> 04:51.430
+I think there's a problem with the dashboard layout.
+
+04:51.430 --> 04:54.610
+I think that the thing is I have two of the same dashboard.
+
+04:54.610 --> 04:58.140
+Perhaps this is a problem in the root or the layouts file.
+
+04:58.170 --> 04:59.530
+Can you have a look for me?
+
+05:00.040 --> 05:01.360
+And then we can hit Ctrl V.
+
+05:01.540 --> 05:06.400
+And then notice how we're able to get dictation working directly into composer.
+
+05:06.970 --> 05:11.500
+I'll send a link for the application that I use to do this, and we'll have a look at that in a bit.
+
+05:11.530 --> 05:14.770
+So now it's decided that the layout needs to be changed.
+
+05:14.770 --> 05:19.930
+It's now modifying the layouts file and it's changing the dashboard layout.
+
+05:23.500 --> 05:25.360
+I'm going to click Accept All Changes.
+
+05:25.360 --> 05:29.110
+And then I'm going to have a look at how this looks inside of the front end.
+
+05:30.070 --> 05:31.270
+All right there we go.
+
+05:31.270 --> 05:32.500
+So we've got our dashboard.
+
+05:32.500 --> 05:37.270
+Now the other thing I want to talk about is you could have lots of different prompt templates for lots
+
+05:37.270 --> 05:38.620
+of different types of ideas.
+
+05:38.650 --> 05:42.970
+Let's think about different types of things that you often want to scaffold inside your project.
+
+05:43.390 --> 05:45.670
+For example, you could have a home page dot txt.
+
+05:45.730 --> 05:49.090
+You could even have supabase or settings dot txt.
+
+05:49.450 --> 05:53.020
+Let's also do something where we're going to create a composer project.
+
+05:53.050 --> 06:00.250
+A composer project allows us to specifically have a new project which can attach multiple composers
+
+06:00.250 --> 06:00.580
+to this.
+
+06:00.610 --> 06:02.590
+For example, I could say authentication.
+
+06:02.590 --> 06:09.610
+Then I can say what we want to just add the supabase auth text file and then we'll say create a new
+
+06:09.610 --> 06:10.390
+composer.
+
+06:10.390 --> 06:17.500
+And then I'll say I want you to create my authentication code inside my application.
+
+06:17.530 --> 06:20.410
+What we're doing is setting up a composer project.
+
+06:20.410 --> 06:26.230
+That means we can then add on all the relevant files to that project as it creates them, and then make
+
+06:26.230 --> 06:29.170
+new composers that use the same project.
+
+06:29.170 --> 06:34.900
+And why that's useful is because otherwise you would have to add on manually the same files every time
+
+06:34.900 --> 06:36.010
+you made a composer.
+
+06:36.010 --> 06:39.610
+If we now look, it's made a bunch of different files for us to implement.
+
+06:39.640 --> 06:46.030
+You can see here we've got the auth form, the purchase button, the routes for stripe webhooks, and
+
+06:46.030 --> 06:48.700
+all of that was contained in a prompt template.
+
+06:48.700 --> 06:52.540
+The idea is that you can have a standardized way of creating this.
+
+06:52.540 --> 06:54.460
+I can accept all of these changes.
+
+06:54.460 --> 06:59.350
+And then after I've accepted these changes, then what I could do is then I could start adding these
+
+06:59.350 --> 07:01.120
+changes to that composer session.
+
+07:01.120 --> 07:02.980
+So I'll go back into the control panel.
+
+07:03.010 --> 07:06.910
+If we go to authentication, we can add those focus files.
+
+07:08.530 --> 07:09.190
+Let's have a look.
+
+07:09.220 --> 07:15.250
+We can also add the Supabase auth settings dot txt and I can tell it I want to create a new composer.
+
+07:15.280 --> 07:23.980
+I want you to look for bugs in my authentication, and to make sure that all of the files have been
+
+07:23.980 --> 07:24.760
+created.
+
+07:24.790 --> 07:25.120
+Right.
+
+07:25.150 --> 07:32.740
+So this this composer project gives you an easy way to always have these reference files at hand, which
+
+07:32.740 --> 07:36.370
+means you don't have to manually add them each time you make a composer session.
+
+07:36.400 --> 07:41.680
+You can see that it's actually not done everything he needed to do a login page, and it needed to make
+
+07:41.680 --> 07:43.540
+a stripe purchase button.
+
+07:43.540 --> 07:49.270
+And then what I often find is that you end up with a bunch of different errors from when these files
+
+07:49.270 --> 07:50.230
+are created.
+
+07:50.260 --> 07:58.310
+One way you can get around this if I just close composer and we go command shift P, you do the restart
+
+07:58.340 --> 07:59.570
+TypeScript server.
+
+07:59.600 --> 08:04.880
+What's happening is you'll see that we don't have any of these, so we don't have this file.
+
+08:04.880 --> 08:08.390
+We know that when we restarted the TypeScript file we don't have that.
+
+08:08.390 --> 08:09.890
+And we also don't have stripe.
+
+08:09.890 --> 08:13.370
+So then we can put all of these errors into composer.
+
+08:13.370 --> 08:15.050
+So I'll load a new window.
+
+08:15.140 --> 08:18.020
+We're going to still stay in the authentication project.
+
+08:18.050 --> 08:19.520
+I'm going to make a new composer.
+
+08:19.520 --> 08:23.420
+And then I'm just going to add these manually into the composer project.
+
+08:23.450 --> 08:23.810
+Right.
+
+08:23.810 --> 08:29.750
+So we're still using that authentication project inside of composer, but we're now adding all of the
+
+08:29.750 --> 08:30.500
+TypeScript errors.
+
+08:30.500 --> 08:32.510
+And some of these are going to be npm installs.
+
+08:32.510 --> 08:36.050
+So it's probably going to tell us that we need to install the npm package.
+
+08:36.050 --> 08:38.270
+So I'll install stripe.
+
+08:38.270 --> 08:42.290
+And it's also told us that we're missing an all form and a purchase button.
+
+08:42.290 --> 08:44.750
+And it's also told me to install this one here.
+
+08:45.170 --> 08:46.760
+Then I'm going to click Accept All.
+
+08:46.760 --> 08:49.160
+So you can see I'm iteratively working on auth.
+
+08:49.160 --> 08:50.300
+We've got an auth form.
+
+08:50.300 --> 08:53.150
+Now let's also see if there are some other problems.
+
+08:53.150 --> 08:55.400
+So I'm also going to restart the TypeScript server.
+
+08:55.430 --> 08:57.200
+Let's see if we can find any errors.
+
+08:57.230 --> 09:01.160
+So we still can't find this this lib super base folder.
+
+09:01.160 --> 09:02.480
+So let's have a look in our lib.
+
+09:02.480 --> 09:10.040
+And we can say I don't think you have created the super base lib folder structure.
+
+09:10.040 --> 09:17.480
+And we can reference our super base off settings dot txt which has all the information it needs, which
+
+09:17.480 --> 09:21.230
+we've scraped directly from the super base documentation and telling it.
+
+09:21.230 --> 09:22.850
+These are the files that are needed to create.
+
+09:22.850 --> 09:26.960
+And now you'll see we've got the client, the server, and it's added middleware in the root directory
+
+09:26.960 --> 09:27.890
+of the project.
+
+09:28.010 --> 09:33.770
+It's also told us that we need to add the next public super base URL add on key to our project.
+
+09:33.770 --> 09:35.270
+I'm going to click accept.
+
+09:35.690 --> 09:37.730
+And then what I'm going to do is throw this in.
+
+09:37.730 --> 09:40.160
+So looks like this isn't applicable.
+
+09:40.160 --> 09:43.040
+We need something relevant that looks like that to fix that one.
+
+09:43.040 --> 09:45.890
+And I'm going to also restart the TypeScript server.
+
+09:45.890 --> 09:49.280
+So I'm going to do that shift p restart TypeScript server.
+
+09:49.280 --> 09:51.500
+And it looks like we've fixed everything.
+
+09:51.500 --> 09:52.850
+We've got a couple of different errors.
+
+09:52.880 --> 09:53.630
+We'll fix this.
+
+09:53.630 --> 09:56.630
+You can also do right click and say fix with I.
+
+09:56.660 --> 09:58.370
+That will also work as well.
+
+09:58.370 --> 09:59.480
+And you can do that here.
+
+09:59.480 --> 10:01.550
+So that will fix the I in the chat.
+
+10:01.580 --> 10:03.200
+I found that to be quite useful as well.
+
+10:03.200 --> 10:06.740
+So we can just click apply and then that's going to apply that change.
+
+10:06.800 --> 10:07.340
+Right.
+
+10:07.340 --> 10:09.830
+So now we've got a problem where we don't have icons.
+
+10:09.830 --> 10:11.330
+So I'm going to click and use that.
+
+10:11.330 --> 10:13.520
+You can see here I'm also mixing in the chat.
+
+10:13.550 --> 10:16.550
+One thing I'm going to do is click run this npm install.
+
+10:16.550 --> 10:18.080
+So let's run that.
+
+10:18.980 --> 10:23.390
+We also need a new component here which is in the components UI.
+
+10:23.540 --> 10:25.460
+That's the icons component.
+
+10:25.880 --> 10:28.100
+Let's have a look and see if it got that one.
+
+10:28.490 --> 10:30.470
+If not, we can manually do that one ourselves.
+
+10:30.470 --> 10:32.180
+That's not too much of a problem.
+
+10:34.160 --> 10:36.110
+So I'll just copy this code here.
+
+10:36.680 --> 10:37.100
+Right.
+
+10:37.130 --> 10:41.150
+You could always restart the TypeScript command shift P restart TypeScript server.
+
+10:41.150 --> 10:42.680
+And you can see the error is going away.
+
+10:42.710 --> 10:49.640
+I want you to find any bugs in my application code for authentication.
+
+10:51.590 --> 10:58.740
+We need this to be production ready I'm going to go back into the control panel in cursor.
+
+10:58.770 --> 11:02.160
+I'm going to add on all the extra reference files that we have.
+
+11:02.160 --> 11:03.660
+So let's have a look at this.
+
+11:03.690 --> 11:04.590
+We've got purchased.
+
+11:04.590 --> 11:08.550
+So I want to have for example let's have a look here.
+
+11:08.550 --> 11:10.140
+We've got purchase button or form.
+
+11:10.140 --> 11:12.840
+We're going to want the roots.
+
+11:13.530 --> 11:19.260
+If we go into the components we're going to want things like the auth form.
+
+11:20.040 --> 11:20.550
+Get those.
+
+11:20.550 --> 11:22.470
+So we'll go purchase button.
+
+11:22.500 --> 11:23.940
+What am I looking for.
+
+11:24.150 --> 11:26.370
+I'm looking for things like let's have a look.
+
+11:26.400 --> 11:28.140
+What other components do we want.
+
+11:28.230 --> 11:29.970
+I can just close this down.
+
+11:30.000 --> 11:31.920
+Have a look at my application.
+
+11:31.950 --> 11:34.080
+Look do we have a login page?
+
+11:34.080 --> 11:34.590
+We do.
+
+11:34.620 --> 11:36.240
+We have a login page.
+
+11:36.540 --> 11:40.410
+And we also have these create checkout session and webhook.
+
+11:40.410 --> 11:43.350
+So I'm going to go back to compose with command shift I.
+
+11:43.440 --> 11:49.470
+And then I'm going to add in I'm going to go stripe and I need to add in these webhooks.
+
+11:49.470 --> 11:51.600
+So we've got both of those routes which is good.
+
+11:51.600 --> 11:59.130
+We want to add in the login route Is there anything else we probably want to add in the dashboard?
+
+11:59.190 --> 12:01.050
+That would probably be quite useful.
+
+12:01.050 --> 12:04.410
+So we'll add in the dashboard layout, the header and the sidebar.
+
+12:04.500 --> 12:11.100
+We've now got everything inside of our composer project, which means we can load a new composer and
+
+12:11.100 --> 12:18.660
+say, I want you to look for any bugs and fix any bugs within the authentication.
+
+12:18.690 --> 12:21.570
+Also, show me how to use it.
+
+12:22.650 --> 12:27.660
+So now we've fixed any TypeScript bugs, and it needs to make sure that we've got everything.
+
+12:27.660 --> 12:29.280
+With any improvements.
+
+12:29.280 --> 12:34.020
+We've got our two API endpoints, which is the create checkout session with stripe.
+
+12:34.020 --> 12:35.400
+And we've also got the webhook.
+
+12:35.430 --> 12:40.140
+I'm not too convinced on the fact that we don't have a lot of event types.
+
+12:40.140 --> 12:43.950
+So I'm going to improve and we can add a file.
+
+12:44.250 --> 12:46.650
+I'm going to accept all these changes and keep working with composer.
+
+12:46.650 --> 12:49.950
+And I'll say add file and we'll say webhook.
+
+12:51.390 --> 12:54.840
+Make it so that it uses Supabase.
+
+12:55.890 --> 12:58.080
+And we're also going to add the folder.
+
+12:58.110 --> 13:00.840
+So this is where I would often throw in the SQL types.
+
+13:00.840 --> 13:04.830
+That's probably useful to save to the user.
+
+13:05.220 --> 13:08.610
+And in this case I'm actually just going to paste these directly in.
+
+13:08.850 --> 13:16.290
+But it could also be useful to have the SQL migrations to hand, so that you can easily paste those
+
+13:16.290 --> 13:18.120
+in as a app folder reference.
+
+13:18.150 --> 13:23.730
+For now, I'm just going to show you exactly what SQL is, and I want it to also improve the webhook
+
+13:23.730 --> 13:29.850
+route so that when we have purchased events happening from stripe, then we can easily handle all those
+
+13:29.850 --> 13:30.780
+different types of events.
+
+13:30.810 --> 13:35.820
+So you can see now it's rewriting the webhook, and it's doing it to be a lot more verbose.
+
+13:35.820 --> 13:37.710
+And again we just click accept.
+
+13:37.890 --> 13:39.960
+And then we've got a couple of errors here.
+
+13:39.960 --> 13:42.210
+So let's just throw those into composer.
+
+13:42.240 --> 13:42.960
+Composer.
+
+13:42.960 --> 13:46.800
+So I hit command shift I and then I go back I'll make a new composer.
+
+13:46.800 --> 13:48.330
+And I'm just going to throw these in.
+
+13:48.600 --> 13:51.510
+And these are the fact that this error is a type of unknown.
+
+13:51.510 --> 13:54.120
+So we need to be more specific on what that is
+
+13:57.970 --> 14:00.490
+So we've got a remember to import author.
+
+14:00.880 --> 14:01.690
+And there we go.
+
+14:01.690 --> 14:03.730
+So now we've got better types.
+
+14:03.880 --> 14:08.020
+Uh now we'll say how do I use this within my project.
+
+14:08.230 --> 14:14.410
+Can you show me how to run this locally using the Superbase local stack?
+
+14:16.660 --> 14:19.780
+So it gives us some information about the fact that we need to have superbase running.
+
+14:19.780 --> 14:22.060
+We need to start the Superbase project.
+
+14:22.060 --> 14:25.450
+So in my terminal, I'm just going to go up here and do Superbase start.
+
+14:25.990 --> 14:28.870
+And then we can see Superbase is already running.
+
+14:28.870 --> 14:34.630
+We can confirm that if I just have a look here by doing Docker PS and you can see we've got our Superbase
+
+14:34.630 --> 14:35.860
+local stack running.
+
+14:36.160 --> 14:39.130
+So then let's have a look at what we have on the front end.
+
+14:39.160 --> 14:43.720
+We're going to CD back into the client and do npm run dev and have a look in the client.
+
+14:43.750 --> 14:45.250
+Okay so we've got a couple of problems here.
+
+14:45.250 --> 14:46.960
+We don't have a register route.
+
+14:46.990 --> 14:48.880
+And the login for example.
+
+14:49.090 --> 14:51.880
+It's using a magic link email and password in Google.
+
+14:51.880 --> 14:54.520
+But we don't specifically have a register route.
+
+14:54.520 --> 14:54.530
+row.
+
+14:54.530 --> 14:59.600
+So one thing I'm going to do, and the other problem we have is it's wrapped in this dashboard routing.
+
+14:59.600 --> 15:02.480
+So this is another thing that we're going to go and fix.
+
+15:02.480 --> 15:04.310
+So we're going to go back into cursor.
+
+15:04.400 --> 15:07.130
+So we're going to go back into cursor and fix that.
+
+15:07.490 --> 15:11.810
+So I've loaded my authentication project that has all of the relevant files.
+
+15:11.810 --> 15:17.150
+And now what we also need to do is we need to make sure that we add a new composer.
+
+15:17.720 --> 15:26.120
+And then I'll say number one, I need a register page that needs to be properly filled in.
+
+15:26.300 --> 15:28.190
+We'll give it the SQL here.
+
+15:28.220 --> 15:30.890
+We could have also provided a SQL file.
+
+15:31.430 --> 15:42.740
+Um, now we also say the dashboard layout should not wrap the entire application and should be separated
+
+15:42.800 --> 15:48.980
+as a root group using Next.js with the brackets.
+
+15:48.980 --> 15:50.930
+And let's see if it can figure these two out.
+
+15:52.370 --> 15:52.640
+Cool.
+
+15:52.640 --> 15:53.690
+So it's created this.
+
+15:53.720 --> 15:55.930
+It's created a register form.
+
+15:56.020 --> 15:57.400
+So it's creating a register page.
+
+15:57.430 --> 15:59.110
+A register form component.
+
+15:59.380 --> 16:02.230
+And then we'll see if it's able to fix the dashboard.
+
+16:02.230 --> 16:04.240
+So you can see it's using these route groups.
+
+16:04.270 --> 16:05.920
+We've got one for the dashboard.
+
+16:05.920 --> 16:07.150
+And we've got our.
+
+16:07.270 --> 16:09.460
+So you can add more pages to the dashboard there.
+
+16:09.490 --> 16:10.270
+Let's have a look.
+
+16:10.270 --> 16:13.210
+So I'm going to click Accept All and we'll have a look and see the changes.
+
+16:13.210 --> 16:16.990
+So now we've got a dashboard which has its own layout.
+
+16:16.990 --> 16:19.450
+And we also have the rest of everything else.
+
+16:19.480 --> 16:21.160
+Let's see if we've got any problems.
+
+16:21.160 --> 16:23.500
+It looks like we do have some errors.
+
+16:23.530 --> 16:26.230
+Let's see if I can just restart the TypeScript server.
+
+16:26.230 --> 16:28.690
+And if those fix those errors and it has indeed.
+
+16:28.720 --> 16:29.110
+Okay.
+
+16:29.140 --> 16:30.910
+So let's go back to the application.
+
+16:30.910 --> 16:34.210
+And we have got an error here where we can't import the buttons.
+
+16:34.210 --> 16:40.210
+So I'm going I'm going to just see if this is actually a problem in the components UI.
+
+16:40.240 --> 16:42.550
+Do we have a button.
+
+16:43.420 --> 16:44.200
+We do.
+
+16:44.950 --> 16:47.200
+And do we have a icons.
+
+16:47.500 --> 16:49.690
+I think this is a false positive error.
+
+16:49.810 --> 16:50.740
+Let's just have a look.
+
+16:50.770 --> 16:51.010
+Okay.
+
+16:51.040 --> 16:56.690
+So on the login page we just have a form which is exactly what we want with our login.
+
+16:57.110 --> 17:02.000
+And we also have the slash register, which also just has a form on it as well.
+
+17:02.030 --> 17:02.240
+Right.
+
+17:02.240 --> 17:07.400
+So the last thing that I want to do is just click register and see if this actually registers a user.
+
+17:07.430 --> 17:13.070
+So we'll go into the profiles table and you can see we've got a new record or row that has just landed
+
+17:13.070 --> 17:14.060
+in the profiles table.
+
+17:14.060 --> 17:16.430
+And also in the local database.
+
+17:16.430 --> 17:22.160
+If we look inside of authentication we've got a new user inside of the Superbase localized stack on
+
+17:22.160 --> 17:25.490
+a Docker container that is now doing test at example.
+
+17:25.520 --> 17:31.280
+I can keep going with this and add on extra error handling and redirects for both the login and register
+
+17:31.280 --> 17:35.270
+pages, but hopefully you get the rough idea of what we're doing here with composer.
+
+17:35.300 --> 17:37.730
+We're adding lots of different files to composer.
+
+17:37.760 --> 17:42.440
+As composer generates those files, we then add those into the composer project.
+
+17:42.440 --> 17:46.700
+That then means that when we come back to doing a similar task, we've already got all the reference
+
+17:46.700 --> 17:47.540
+files there.
+
+17:47.570 --> 17:52.820
+In the next video, we're going to have a look at how you can use dictation to improve your flow and
+
+17:52.820 --> 17:54.380
+speak directly to composer.

@@ -1,0 +1,142 @@
+WEBVTT
+
+00:00.080 --> 00:00.770
+Hey welcome back.
+
+00:00.800 --> 00:05.180
+And in this video we're going to have a look at two websites that can help you easily create diagrams
+
+00:05.180 --> 00:06.740
+to code implementations.
+
+00:06.740 --> 00:10.850
+We first have Excalidraw where we can create mock UI diagrams.
+
+00:10.850 --> 00:12.530
+And we also have v0.
+
+00:12.560 --> 00:17.810
+V0 is a product that's made by Vercel that helps you to generate UIs quickly directly from text.
+
+00:17.840 --> 00:23.990
+We can combine these two tools to take diagrams immediately put these into V0 to create high quality
+
+00:23.990 --> 00:24.890
+react components.
+
+00:24.890 --> 00:28.550
+For example, I can diagram and mock out my existing wireframes.
+
+00:28.550 --> 00:31.100
+So I'm going to have a logo in the top left.
+
+00:31.820 --> 00:34.790
+Then I'm going to have a navigation bar here.
+
+00:36.380 --> 00:37.910
+We'll call that navigation.
+
+00:38.750 --> 00:44.960
+And then I'm going to have a sidebar here and a sidebar.
+
+00:46.160 --> 00:47.750
+And I'm just going to put some links here.
+
+00:47.750 --> 00:48.500
+Link.
+
+00:48.710 --> 00:49.820
+Link one.
+
+00:50.690 --> 00:52.100
+Link two.
+
+00:52.640 --> 00:55.310
+Also let's have a main content section here.
+
+00:55.550 --> 01:03.380
+And let's have some cards with a title and also a description.
+
+01:04.400 --> 01:13.580
+And then I'm just going to group these together and make a couple of these just to left click and hover
+
+01:13.610 --> 01:14.960
+over the entire diagram.
+
+01:14.960 --> 01:21.680
+And then after that go to the hamburger menu in the top left click on Export Image and then we'll click
+
+01:21.710 --> 01:24.800
+a PNG and click save.
+
+01:24.830 --> 01:26.410
+Now we've saved that to the desktop.
+
+01:26.410 --> 01:28.090
+We're going to go back to V0.
+
+01:28.120 --> 01:30.760
+Make sure that you log into V0.
+
+01:30.790 --> 01:34.390
+After you've logged in, I'm going to suggest you write a prompt something like this.
+
+01:34.390 --> 01:37.750
+I want you to generate a very good dashboard interface using an image.
+
+01:37.750 --> 01:41.530
+Make it use Shadchan, radix UI and also Next.js app router.
+
+01:41.530 --> 01:46.510
+We're then going to go and attach a file and we're going to attach the new PNG.
+
+01:46.720 --> 01:48.100
+Then we're going to click on the arrow.
+
+01:48.100 --> 01:49.240
+Or you can just hit enter.
+
+01:49.240 --> 01:53.290
+And then V0 is going to come up with a custom dashboard interface.
+
+01:53.290 --> 01:57.190
+That's based on the sketch that you've done inside of the Excalidraw tool.
+
+01:57.190 --> 02:03.610
+And this also allows you to see what the existing dashboard code would look like, as well as also providing
+
+02:03.610 --> 02:05.530
+you with the code implementation.
+
+02:05.530 --> 02:10.240
+So you can see both the preview of what that dashboard component looks like.
+
+02:10.240 --> 02:15.430
+And as well as that, you can also look at the code implementation and you can copy the code implementation.
+
+02:15.430 --> 02:20.290
+And notice how it's also using all of the components that we've recommended from last side, react and
+
+02:20.290 --> 02:25.750
+also shadow UI to quickly import your component directly into a Next.js application.
+
+02:25.750 --> 02:32.020
+Also go to the top right click on the add to codebase and then you can use this mpx Shad add command,
+
+02:32.020 --> 02:36.880
+which will directly import a V0 component into your application.
+
+02:37.300 --> 02:37.900
+Okay, cool.
+
+02:37.900 --> 02:41.620
+Hopefully this shows you how you can easily mock prototypes directly from images.
+
+02:41.650 --> 02:44.650
+I recommend taking some time out to practice this activity.
+
+02:44.680 --> 02:49.960
+Mock out a diagram of a UI component that you want to create, and then take that image and build it
+
+02:49.960 --> 02:50.830
+using V0.

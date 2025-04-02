@@ -1,0 +1,118 @@
+WEBVTT
+
+00:00.020 --> 00:04.130
+In this video, we're going to have a look at how you can use smart rewrites with comments to date your
+
+00:04.130 --> 00:05.420
+code automatically.
+
+00:05.450 --> 00:09.680
+You'll be solely using the tab completion feature of cursor in this video.
+
+00:09.710 --> 00:15.920
+The Tab feature allows you to automatically fix broken code and also generate more code directly by
+
+00:15.920 --> 00:20.450
+using things like comments, descriptive class names, and descriptive function names.
+
+00:20.480 --> 00:24.170
+Let's go through a couple of examples together of how you can use the tab completion feature.
+
+00:24.170 --> 00:26.090
+And then you can have a go on your own time.
+
+00:26.090 --> 00:31.040
+All of the files for this are inside of Udemy and also inside of the GitHub repository, so feel free
+
+00:31.040 --> 00:32.660
+to download those before starting.
+
+00:32.660 --> 00:33.710
+So you can see here we've got this.
+
+00:33.710 --> 00:35.780
+Rewrite this function using a list comprehension.
+
+00:35.780 --> 00:38.360
+And let's see what cursor decides to do with this.
+
+00:38.390 --> 00:39.740
+So I'm going to go into this.
+
+00:39.740 --> 00:42.620
+And then you can see here we've got the return statement.
+
+00:42.620 --> 00:47.930
+And then if I keep tabbing and then tabbing as well, it's just removing all that additional code.
+
+00:47.960 --> 00:49.910
+And we can see we've got this one here.
+
+00:49.910 --> 00:52.880
+You could even add on things like the Pylint errors.
+
+00:52.880 --> 00:55.040
+And you could put that as a comment.
+
+00:55.040 --> 01:00.050
+And then what it will do is it will add a docstring for you and then that will remove that as well.
+
+01:00.050 --> 01:03.440
+You can even take different types of things that you're finding inside of your coding editor.
+
+01:03.470 --> 01:06.200
+Throw those into Python comments and those will be fixed.
+
+01:06.200 --> 01:07.250
+So have a look at this.
+
+01:07.280 --> 01:10.070
+We want to multiply this by number by two.
+
+01:10.100 --> 01:15.140
+And then if we have a look at the person name age we also are now able to do that.
+
+01:15.140 --> 01:17.450
+Rewrite this class using data structures.
+
+01:17.450 --> 01:19.400
+So we need to do a lambda function for this.
+
+01:19.400 --> 01:20.450
+So I could get rid of this.
+
+01:20.450 --> 01:22.850
+And then I could even do something like this.
+
+01:22.850 --> 01:24.860
+So I would normally do these above.
+
+01:24.860 --> 01:30.920
+So I would say like def and then we'll do multiply by two is equal to.
+
+01:30.950 --> 01:32.180
+And then you've got the lambda there.
+
+01:32.180 --> 01:34.070
+So sometimes you do need to prompt these things.
+
+01:34.070 --> 01:36.050
+They don't work directly out of the box.
+
+01:36.050 --> 01:39.440
+And you can see this class needs to be written as a data class.
+
+01:39.440 --> 01:41.540
+So again I would probably just do this.
+
+01:41.540 --> 01:45.620
+And then you can see here it's decided to update these practice tab completion.
+
+01:45.620 --> 01:48.920
+Go and finish all of the rest of the functions inside of this file.
+
+01:48.920 --> 01:53.480
+Also, if you want to see all of the completed suggestions, have a look in smart rewrites completed.
+
+01:53.480 --> 01:54.890
+Good luck and I'll see you in the next one.

@@ -1,0 +1,70 @@
+WEBVTT
+
+00:00.050 --> 00:05.600
+One common problem you'll have when using Cursor Composer is that sometimes it can cause errors in your
+
+00:05.600 --> 00:11.510
+code further along down the line, or potentially it removes features as you're working in composer
+
+00:11.510 --> 00:12.170
+sessions.
+
+00:12.200 --> 00:16.760
+Now, we've simulated a bunch of errors here, and I'm going to accept all these changes.
+
+00:16.760 --> 00:18.080
+And we're going to break the code.
+
+00:18.080 --> 00:20.630
+So you can see here we've got a non-existent function.
+
+00:20.630 --> 00:23.030
+And we've also got some type errors here.
+
+00:23.060 --> 00:28.040
+Now when I try and load the next application this will then cause a bug and an error.
+
+00:28.040 --> 00:32.510
+And this is a bad thing because over time as you're using composer, sometimes it can take features
+
+00:32.510 --> 00:34.730
+out or cause errors inside of your code.
+
+00:34.730 --> 00:40.160
+So how can you easily revert back to a previous point within the composer session so that your code
+
+00:40.160 --> 00:40.610
+works?
+
+00:40.610 --> 00:45.830
+Cursor has introduced this concept of checkpoints, so if you look on the right hand side you can see
+
+00:45.860 --> 00:47.510
+we've got a checkpoint here.
+
+00:47.630 --> 00:50.600
+And we've also got a checkpoint as well here.
+
+00:50.600 --> 00:56.840
+So you can check out for example, if we go back here we can then reset all the files to this by clicking
+
+00:56.840 --> 00:57.650
+the checkout.
+
+00:57.680 --> 01:01.550
+Now if we have a look here, you'll see that all of the files have gone back.
+
+01:01.550 --> 01:08.270
+And so this is a nice easy way that you can easily revert back to a previous point in a composer session
+
+01:08.270 --> 01:11.210
+to avoid regressions or bugs within your code.
+
+01:11.210 --> 01:16.310
+Again, just to clarify, all you're doing is you're basically clicking on the on the checkpoints.
+
+01:16.310 --> 01:20.060
+So you can see here we've got checkpoints and you're clicking on that checkout button.
+
+01:20.060 --> 01:25.400
+And the checkout button allows you to reset all files to this point in the conversation.

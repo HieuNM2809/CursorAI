@@ -1,0 +1,127 @@
+WEBVTT
+
+00:00.020 --> 00:00.260
+Hi.
+
+00:00.290 --> 00:00.950
+Welcome back.
+
+00:00.950 --> 00:03.650
+And in this lesson we're going to talk about code base indexing.
+
+00:03.650 --> 00:08.900
+Code base indexing is a native feature that's supported by cursor, which will basically index all of
+
+00:08.900 --> 00:13.460
+your individual files and create a numerical representation of what that file is.
+
+00:13.490 --> 00:19.400
+It will then use Reranking algorithms to basically pull back relevant code that is relevant to your
+
+00:19.400 --> 00:23.000
+query or your asking question inside of cursor.
+
+00:23.000 --> 00:28.070
+This helps cursor produce better code generation, and you can have a look at this feature by going
+
+00:28.100 --> 00:30.050
+into cursor and looking at the settings.
+
+00:30.050 --> 00:31.340
+Let's have a look at how to do that.
+
+00:31.340 --> 00:35.630
+Now firstly, go up to the top left and then go into Cursor settings.
+
+00:35.630 --> 00:37.220
+And then from Cursor settings.
+
+00:37.220 --> 00:42.680
+What we're then going to do is go to the beaches and we'll have a look at code base indexing.
+
+00:42.680 --> 00:46.580
+And you can see it's using these embeddings to improve your code base wide answers.
+
+00:46.580 --> 00:48.350
+All code is stored locally.
+
+00:48.350 --> 00:50.690
+You can even resync the index by clicking this.
+
+00:50.690 --> 00:54.830
+You can also have a look at settings and you can see these are the ignore files as well.
+
+00:54.830 --> 00:56.720
+And index new folders by default.
+
+00:56.720 --> 01:03.300
+And you can configure the ignored files with a cursor ignore file as well so you can add specific different
+
+01:03.300 --> 01:05.040
+files to your cursor.
+
+01:05.070 --> 01:05.610
+Ignore.
+
+01:05.610 --> 01:09.780
+And that will mean that those files are not picked up by code base indexing.
+
+01:09.780 --> 01:12.300
+Now what types of files might you want to do?
+
+01:12.330 --> 01:18.690
+You might want to exclude packages, for example in a specifically NodeJS or JavaScript or TypeScript
+
+01:18.690 --> 01:19.290
+environments.
+
+01:19.290 --> 01:25.020
+You'll definitely want to exclude the node modules folder as this would bloat your code base indexing.
+
+01:25.020 --> 01:27.000
+Let's have a look at how we can also do that.
+
+01:27.000 --> 01:28.500
+You'll see that I've opted to use the.
+
+01:28.770 --> 01:33.300
+Gitignore file, and I've added the node modules to the top of my file.
+
+01:33.300 --> 01:35.280
+I've also got a bunch of individual.
+
+01:35.310 --> 01:39.450
+You'll also see that I've got a bunch of individual different types of files or folders which need to
+
+01:39.450 --> 01:40.470
+be excluded for Python.
+
+01:40.470 --> 01:41.760
+Now why can we put this inside of the.
+
+01:41.790 --> 01:43.770
+Gitignore and how does this work?
+
+01:43.770 --> 01:48.450
+If you have a look at Cursor's documentation, if you have any large content files, you can ignore
+
+01:48.450 --> 01:49.080
+those files.
+
+01:49.080 --> 01:55.890
+So you can either use a cursor, ignore file or by default cursor will ignore all of the same files
+
+01:55.890 --> 01:56.670
+inside of your.
+
+01:56.910 --> 01:57.570
+Gitignore.
+
+01:57.570 --> 02:02.790
+So if you already have a gitignore, then you're all good for setting up code base indexing appropriately.
+
+02:02.790 --> 02:03.090
+All right.
+
+02:03.120 --> 02:04.380
+Cool I'll see you in the next one.

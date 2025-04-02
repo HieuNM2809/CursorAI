@@ -1,0 +1,64 @@
+WEBVTT
+
+00:00.020 --> 00:03.410
+In the previous video you used V0 to generate react components.
+
+00:03.440 --> 00:06.380
+Now we're going to have a look at how we can do that natively inside of cursor.
+
+00:06.410 --> 00:11.570
+Firstly, what I want you to do is navigate to the folder inside the GitHub repository called Useful
+
+00:11.570 --> 00:12.530
+Prompts for cursor.
+
+00:12.560 --> 00:16.250
+Once you're in that folder, I then want you to hit command L or control L.
+
+00:16.280 --> 00:18.290
+If you're on windows this will load the chat mode.
+
+00:18.320 --> 00:22.580
+Now we're going to drag the image that we previously used in the last lesson.
+
+00:22.580 --> 00:24.860
+And we're going to put that into the chat window.
+
+00:25.430 --> 00:28.730
+So in my case I've got the dot png in my desktop.
+
+00:28.730 --> 00:33.650
+I'm going to drag that once the image is in the chat context, rather than having to manually type the
+
+00:33.650 --> 00:38.030
+command inside of the image to code MD file, there's a prompt which says generate all of the react
+
+00:38.030 --> 00:38.690
+components.
+
+00:38.720 --> 00:45.050
+Given this image, make sure to use tailwind, CSS, Next.js, radix UI, and Next.js app router.
+
+00:45.080 --> 00:49.190
+Then what we can do is inside of the chat window we can just add that prompt.
+
+00:49.190 --> 00:51.500
+So image to code.md.
+
+00:51.590 --> 00:57.020
+And then what you'll see is that now that we've given cursor both the image and also the prompt, then
+
+00:57.020 --> 01:01.670
+it will dynamically generate this code so that we don't have to manually type that over and over again
+
+01:01.670 --> 01:04.130
+whilst we're working with images inside of cursor.
+
+01:04.160 --> 01:09.920
+Also, you could still use Excalidraw to do all of the mock ups and then use cursor directly if you
+
+01:09.920 --> 01:11.240
+don't want to use v0.
+
+01:11.240 --> 01:15.170
+In the next video, we're going to have a look at how you can use web search inside of the chat window.

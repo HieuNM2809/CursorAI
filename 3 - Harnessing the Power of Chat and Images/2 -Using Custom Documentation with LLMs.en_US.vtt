@@ -1,0 +1,382 @@
+WEBVTT
+
+00:00.050 --> 00:00.920
+Hey welcome back.
+
+00:00.920 --> 00:06.500
+And in this video we're going to have a look at how you can integrate custom documentation to help your
+
+00:06.500 --> 00:08.210
+code generation with cursor.
+
+00:08.210 --> 00:09.920
+We're going to be using Lang Chain.
+
+00:09.920 --> 00:16.280
+And we're going to be creating a Python script that allows us to import custom documentation, just
+
+00:16.280 --> 00:22.040
+in case Claude or OpenAI's models or any other type of model doesn't necessarily have that pre-training
+
+00:22.040 --> 00:25.010
+data, that maybe the package has just been updated.
+
+00:25.010 --> 00:30.440
+This is where we're going to have to go and get that documentation, add it into cursor, and then integrate
+
+00:30.440 --> 00:32.060
+that into our script.
+
+00:32.060 --> 00:33.590
+Let's have a look at how we can do this.
+
+00:33.590 --> 00:37.790
+The first thing I'm going to do is I'm going to go and I'm going to copy this documentation.
+
+00:37.790 --> 00:44.810
+I'm going to go into cursor, and I'm going to go and load the chat window with command L.
+
+00:44.900 --> 00:47.450
+After loading this I'm going to do the At symbol.
+
+00:47.480 --> 00:48.770
+And I'm going to go to docs.
+
+00:48.770 --> 00:50.990
+And then I'm going to add a new doc.
+
+00:51.080 --> 00:54.470
+And then I'm going to paste in the documentation here.
+
+00:55.370 --> 00:58.460
+And then it will find the prefix that it thinks it's at.
+
+00:58.460 --> 01:01.320
+So this is the version two of Lang Langton Docks.
+
+01:01.350 --> 01:05.460
+I'm going to say this as Langton Docks Python, and then I can click confirm.
+
+01:08.100 --> 01:10.410
+Now that I've got it, you can have a look here.
+
+01:10.410 --> 01:14.160
+And now you can see that it's actually indexing this documentation.
+
+01:14.700 --> 01:15.360
+Yeah.
+
+01:17.070 --> 01:19.350
+So we'll wait until that indexing is done.
+
+01:23.010 --> 01:26.010
+You can see you can have a look at how many pages are indexed here.
+
+01:31.920 --> 01:33.780
+And also you can update the name.
+
+01:34.470 --> 01:37.080
+And you can also refresh as well.
+
+01:39.630 --> 01:44.580
+So that can be quite useful if you want to refresh the index and make sure it's up to date.
+
+01:45.240 --> 01:46.950
+Now we've indexed six pages so far.
+
+01:46.950 --> 01:50.040
+So you can see now the pages are starting to come in a couple of things here.
+
+01:50.070 --> 01:51.930
+Obviously the packages might change over time.
+
+01:51.930 --> 01:56.460
+So you might want to reclick this arrow and that will reindex your content.
+
+01:56.490 --> 01:59.490
+Also be aware that this is indexing it locally.
+
+01:59.490 --> 02:04.090
+So now that we've started to gather up all these pages, we've done about 30 and it's going through
+
+02:04.090 --> 02:08.590
+and doing that, let's have a look and see if it knows what we're talking about.
+
+02:08.590 --> 02:13.630
+So for example we want to use this link chain open AI.
+
+02:13.630 --> 02:18.910
+And we want to also use something like let's have a look at this.
+
+02:18.970 --> 02:19.420
+Yeah.
+
+02:19.420 --> 02:20.950
+So we use link chain open AI.
+
+02:20.980 --> 02:21.910
+It's going to be running.
+
+02:21.910 --> 02:23.320
+It's indexing this at the moment.
+
+02:23.320 --> 02:26.500
+So lots and lots of pages that you can see here.
+
+02:26.530 --> 02:29.830
+So we're going to say we're going to use the link chain open AI.
+
+02:29.830 --> 02:32.380
+And I'm just also looking for something else that we can demonstrate.
+
+02:32.410 --> 02:35.080
+Maybe a chat base loader or something like that.
+
+02:36.100 --> 02:39.940
+So let's have a look so we can go back into our script whilst that's indexing.
+
+02:40.060 --> 02:47.320
+And then we can say let's just ask a question first so I can say, how do I load OpenAI's chat model
+
+02:47.320 --> 02:48.490
+using Lang chain.
+
+02:48.520 --> 02:51.790
+And notice that we've added the Lang chain docs Python.
+
+02:51.790 --> 02:58.270
+And now what it's doing is it's looking at my query, and it's finding specific parts of the documentation
+
+02:58.270 --> 03:01.100
+that it thinks it should include inside.
+
+03:01.100 --> 03:02.780
+And then it's retrieving those results.
+
+03:02.780 --> 03:04.130
+And then the LM.
+
+03:04.130 --> 03:08.870
+In this case, Claude 355 sonnet is actually deciding how to generate that response.
+
+03:08.870 --> 03:11.150
+So we're using that retrieval augmented generation.
+
+03:11.150 --> 03:15.470
+And you can see it's come up with this answer here where I can import lang chain OpenAI.
+
+03:15.500 --> 03:17.660
+And let's put that in a Python block.
+
+03:17.660 --> 03:19.370
+So I'll just do a new one here.
+
+03:19.400 --> 03:24.170
+And then I've got to convert this to a cell okay.
+
+03:24.170 --> 03:24.470
+Great.
+
+03:24.470 --> 03:27.800
+So we figured out how we can get a Lang chain OpenAI.
+
+03:27.800 --> 03:30.980
+And I've already got an API key saved locally.
+
+03:30.980 --> 03:33.320
+So I can just do GPT 3.5 turbo.
+
+03:33.320 --> 03:36.710
+So we'll get rid of this and we'll do GPT four oh instead.
+
+03:36.920 --> 03:37.580
+Okay.
+
+03:37.610 --> 03:40.130
+Now I'm going to ask it how do I call this.
+
+03:40.160 --> 03:43.550
+Oh, and it's given me an exact way of calling this from the documentation.
+
+03:43.550 --> 03:44.630
+So let's have a look at this.
+
+03:44.630 --> 03:49.670
+So if I do this chat dot invoke and I pass in a human message hello how are you.
+
+03:49.700 --> 03:55.490
+And then you can see like we've got this chat model and we invoke the chat model with a human message
+
+03:55.520 --> 03:57.530
+asking the LLM how it is.
+
+03:57.560 --> 04:06.260
+Now the next thing we need to do is we say, I want to use pydantic models with structured outputs to
+
+04:06.290 --> 04:10.100
+figure out to generate 3 to 5 business names.
+
+04:10.130 --> 04:10.400
+Okay.
+
+04:10.430 --> 04:15.320
+So we're giving it the long chain documentation again, which you can see is in the context here.
+
+04:15.350 --> 04:17.180
+We're using 3.5 sonnet.
+
+04:17.180 --> 04:20.540
+And then it's decided to create a business named one here.
+
+04:20.540 --> 04:23.570
+So we're going to copy and paste that which is the business names.
+
+04:23.570 --> 04:25.370
+And we create an instance of the chat model.
+
+04:25.370 --> 04:26.300
+So we've already got one of those.
+
+04:26.300 --> 04:29.960
+And then we're using chat with structured outputs.
+
+04:29.960 --> 04:31.550
+And we're putting in the business names.
+
+04:31.550 --> 04:33.380
+So let's put that afterwards.
+
+04:35.600 --> 04:37.130
+And then we'll just copy this.
+
+04:38.030 --> 04:42.110
+And then we can now invoke the data with a prompt to generate business names.
+
+04:42.110 --> 04:44.420
+So let's change this one here that we had before.
+
+04:44.420 --> 04:49.430
+And notice how we're calling the structured outputs chain to invoke that and generate some business
+
+04:49.430 --> 04:50.600
+names for a tech startup.
+
+04:50.600 --> 04:54.710
+Let me just run all this code from the top down and clean up the imports.
+
+04:57.020 --> 05:01.170
+And if you look here, if we look at what we have as a type of result.
+
+05:01.830 --> 05:05.250
+We have a business named Pedantic Object.
+
+05:05.280 --> 05:11.580
+If we look at this and then we can see the names property and then again, what we can then do is we
+
+05:11.580 --> 05:12.840
+can start iterating on this.
+
+05:12.840 --> 05:17.370
+So we could use a bit of command k that we're going to show you in the next lecture where we can say
+
+05:17.370 --> 05:18.300
+command k.
+
+05:18.330 --> 05:21.900
+Also add on a score for each name.
+
+05:22.080 --> 05:24.240
+Uh reason for selecting.
+
+05:25.680 --> 05:27.390
+And then we can change our business names.
+
+05:27.390 --> 05:28.410
+Pedantic model.
+
+05:28.410 --> 05:31.650
+And now we've got three individual lists.
+
+05:31.650 --> 05:37.230
+One which has the business name, one which has the scores, and one list of reasons, which has a list
+
+05:37.230 --> 05:37.650
+of strings.
+
+05:37.650 --> 05:39.600
+And you've just got the reasons for choosing each business name.
+
+05:39.630 --> 05:40.230
+Okay, cool.
+
+05:40.230 --> 05:46.800
+If we now run this, what you'll see is you've got the ability to do result dot names, result dot scores,
+
+05:46.830 --> 05:49.200
+and also result dot reasons.
+
+05:49.200 --> 05:54.330
+And what's interesting about this is that even though we didn't necessarily add this code in the chat
+
+05:54.330 --> 05:59.920
+window, if you look in the bottom, you can see that it has that context of the Jupyter notebook so
+
+05:59.920 --> 06:05.320
+I can say what are the keys inside of the business names?
+
+06:05.320 --> 06:06.760
+Pydantic model.
+
+06:07.210 --> 06:07.480
+Right?
+
+06:07.510 --> 06:11.800
+And it's going to always index the documentation, which is why it's taking a little bit longer.
+
+06:11.800 --> 06:16.630
+So there is a trade off here of if you add custom documentation, you've also got to be wait for that
+
+06:16.630 --> 06:17.710
+to be retrieved.
+
+06:17.710 --> 06:22.960
+But you can also see that even with the changes from command K, it was able to integrate that back
+
+06:22.960 --> 06:24.010
+into the chat window.
+
+06:24.040 --> 06:24.310
+Okay.
+
+06:24.340 --> 06:28.870
+So I want you to think about these things rather than them being separate things that you use like command
+
+06:28.900 --> 06:33.880
+K, command L composer, you can mix and choose these different techniques.
+
+06:33.880 --> 06:39.370
+So again, just to recap, in this video we had a look at how you can add custom documentation to a
+
+06:39.370 --> 06:40.180
+chat window.
+
+06:40.180 --> 06:45.520
+And that was using the At symbol going into the docs and then clicking Add New Doc.
+
+06:45.550 --> 06:50.290
+After we'd waited for that documentation to index locally inside of your machine.
+
+06:50.290 --> 06:55.870
+Then we started using the chat window to then generate some of the code, and then started iterating
+
+06:55.870 --> 06:56.140
+on that.
+
+06:56.140 --> 06:58.780
+Using up to date documentation from long chain.
+
+06:58.810 --> 06:59.170
+Cool!
+
+06:59.200 --> 07:00.070
+See you in the next video.

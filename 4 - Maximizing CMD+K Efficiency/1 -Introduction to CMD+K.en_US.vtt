@@ -1,0 +1,145 @@
+WEBVTT
+
+00:00.020 --> 00:00.650
+Hey, welcome.
+
+00:00.680 --> 00:05.060
+And in this video we're going to have a look at command K the inline editor that you can use inside
+
+00:05.060 --> 00:05.570
+of cursor.
+
+00:05.600 --> 00:08.960
+We've looked at it a couple of times before, but I've got a Python file here.
+
+00:08.960 --> 00:13.040
+And you'll also have that same Python file if you want to practice a little bit, get really familiar
+
+00:13.040 --> 00:14.390
+with using that inline editor.
+
+00:14.390 --> 00:19.250
+Then you can obviously you can select we've got a couple of different functions here like greet calculate
+
+00:19.250 --> 00:21.470
+area, generate password and Fibonacci.
+
+00:21.470 --> 00:22.820
+And we've got a couple of to do's.
+
+00:22.820 --> 00:25.640
+So we could either even just do it here.
+
+00:25.640 --> 00:27.500
+We don't even need to do an inline edit.
+
+00:27.500 --> 00:31.760
+We can literally just say upgrade greet to handle multiple names and different languages.
+
+00:31.760 --> 00:36.560
+And cursor is clever enough to know that it needs to generate a new Python function.
+
+00:36.560 --> 00:38.540
+So that's how you can use it for generation.
+
+00:38.540 --> 00:44.330
+But we could reject that, and we could actually highlight the function that we want to change.
+
+00:44.330 --> 00:46.610
+So we can either generate or we can edit.
+
+00:46.610 --> 00:49.070
+So then let's do this submit the edit.
+
+00:53.540 --> 00:55.460
+And then you can see here this is the diff.
+
+00:55.460 --> 00:58.340
+So the red is getting deleted and the green is getting accepted.
+
+00:58.340 --> 01:03.470
+And again I'm really happy with this So in a mac you can just hit command enter on windows.
+
+01:03.470 --> 01:04.730
+That would be control enter.
+
+01:04.730 --> 01:05.750
+And then there we have it.
+
+01:05.780 --> 01:07.310
+We've refactored our code.
+
+01:07.310 --> 01:08.960
+Let's also do another couple.
+
+01:08.960 --> 01:10.250
+So we could say update.
+
+01:10.250 --> 01:11.210
+So we've got rid of this one.
+
+01:11.210 --> 01:13.760
+We could add input validation to calculate area.
+
+01:13.760 --> 01:17.000
+And also we could do this one here and we could do two at the same time.
+
+01:17.000 --> 01:21.020
+So we could select two functions and we could add a couple of these to do.
+
+01:21.020 --> 01:23.930
+And then we can see that this will then rewrite that code.
+
+01:23.930 --> 01:27.110
+And as you can see here we're getting really nice properly formatted docstrings.
+
+01:27.110 --> 01:29.780
+And we can also then just click accept.
+
+01:29.780 --> 01:33.650
+And then we've also got the final one which is optimizing Fibonacci.
+
+01:33.680 --> 01:38.420
+And as you can see you can easily refactor entire functions in just a couple of seconds.
+
+01:38.420 --> 01:40.850
+So again that's really quite quite nice.
+
+01:40.850 --> 01:46.190
+One other thing you can be aware of when you're doing inline edits is you can also do other things.
+
+01:46.190 --> 01:50.060
+So if I was to select the functions we can still do those app references.
+
+01:50.090 --> 01:55.730
+Imagine you've got some other files, maybe custom documentation, or you want to reference a chat session.
+
+01:55.730 --> 01:57.410
+It's possible to do all of that.
+
+01:57.440 --> 02:02.420
+Be aware that inline editing you're probably going to be using that to refactor functions, classes,
+
+02:02.420 --> 02:08.990
+or service files, but you can still pull in additional files, code, or documentation.
+
+02:08.990 --> 02:14.000
+That can be an easy way to stay in the flow of coding, but not necessarily have to use the chat session.
+
+02:14.000 --> 02:19.910
+And the good thing about inline editing is you get the diffs so you can easily reject or accept the
+
+02:19.910 --> 02:22.670
+differences in the code that get generated in real time.
+
+02:22.820 --> 02:23.240
+Cool.
+
+02:23.240 --> 02:24.830
+So that was an introduction.
+
+02:24.860 --> 02:28.010
+Next we're going to be looking in greater detail at composer.
+
+02:28.040 --> 02:28.580
+I'll see you there.

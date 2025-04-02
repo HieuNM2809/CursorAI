@@ -1,0 +1,241 @@
+WEBVTT
+
+00:00.140 --> 00:00.530
+All right.
+
+00:00.560 --> 00:05.600
+Now that you've got cursor installed and you have your VSCode extensions that have been copied across
+
+00:05.600 --> 00:10.160
+potentially from VSCode, we're going to have a look at the best way that you can set up cursor to get
+
+00:10.160 --> 00:11.300
+the most out of this tool.
+
+00:11.330 --> 00:15.680
+What I want you to do is I want you to navigate to the preferences inside of cursor.
+
+00:15.680 --> 00:21.920
+So go to the settings and then you've got VSCode settings which is how you can configure your VSCode
+
+00:21.920 --> 00:22.550
+settings.
+
+00:22.550 --> 00:26.570
+We're going to go into Cursor Settings and go to general.
+
+00:26.600 --> 00:29.150
+Now I do recommend you upgrading to the Pro account.
+
+00:29.150 --> 00:30.410
+You'll get a load of free features.
+
+00:30.410 --> 00:32.060
+And they also offer a really great trial.
+
+00:32.060 --> 00:33.200
+So give that a go.
+
+00:33.230 --> 00:37.790
+As you can see here, if you need to do a re-import from VSCode, you can do that.
+
+00:37.790 --> 00:39.320
+Now this is really important.
+
+00:39.320 --> 00:41.630
+This section where you've got the rules for AI.
+
+00:41.660 --> 00:47.450
+These are the rules that cursor is going to follow as it runs any of its different types of auto completions
+
+00:47.450 --> 00:51.680
+predictions, or even using more advanced features like composer.
+
+00:51.680 --> 00:53.810
+So you can obviously add the rules here.
+
+00:53.810 --> 00:57.530
+And that will be enabled globally across all of your different cursor windows.
+
+00:57.560 --> 01:03.020
+Additionally, you can choose to add in this hidden file, which is called a cursor rules file.
+
+01:03.020 --> 01:04.670
+And you can see here we've done that.
+
+01:04.670 --> 01:10.190
+And I've added in a cursor rules specifically telling it to focus on the fact that it's an expert in
+
+01:10.190 --> 01:13.130
+Python, fast API and API scale development.
+
+01:13.160 --> 01:16.730
+You can add on some different types of things, like different types of dependencies you want it to
+
+01:16.730 --> 01:18.590
+use and key conventions.
+
+01:18.590 --> 01:22.460
+And there's a great website and that's called cursor dot directory.
+
+01:22.460 --> 01:27.740
+And you can find lots of different types of rules that people have made for different types of programming
+
+01:27.740 --> 01:34.610
+languages and frameworks that you can include either globally inside of your cursor project in the settings,
+
+01:34.610 --> 01:36.710
+or you can include as the cursor rules.
+
+01:36.710 --> 01:42.170
+Personally, I'm starting to like cursor rules, and the reason why is then I can define that on a project
+
+01:42.170 --> 01:43.280
+by project basis.
+
+01:43.280 --> 01:44.600
+I have also got privacy mode.
+
+01:44.600 --> 01:46.310
+I recommend turning that to disabled.
+
+01:46.340 --> 01:49.280
+Now let's go to another section which is the models.
+
+01:49.280 --> 01:52.190
+So here you're going to have different types of models.
+
+01:52.190 --> 01:57.830
+And my recommendation would be to turn pretty much every single model off apart from cursor Small,
+
+01:57.860 --> 02:03.710
+GPT 3.5, turbo 3.5, sonnet, and GPT four mini.
+
+02:03.740 --> 02:09.290
+My suggestion is when you're coding at the moment, this current time of recording this video is to
+
+02:09.320 --> 02:11.510
+use Claude 3.5 sonnet.
+
+02:11.540 --> 02:17.840
+I've personally been a big fan of OpenAI, but having tried Claude 3.5 sonnet, it really is great for
+
+02:17.840 --> 02:18.380
+coding.
+
+02:18.410 --> 02:23.510
+After clicking on the features tab, you want to make sure that you've got several settings enabled.
+
+02:23.510 --> 02:26.780
+For example, in the tab completion, we'll want to turn that on.
+
+02:26.810 --> 02:29.780
+I personally don't like accepting partial edits.
+
+02:29.780 --> 02:36.560
+I do have cursor prediction on, and that will basically move the cursor whenever you hit tab on the
+
+02:36.560 --> 02:37.130
+screen.
+
+02:37.130 --> 02:39.740
+So maybe there's an error halfway down your code.
+
+02:39.740 --> 02:45.290
+If you hit tab, the cursor will move and then edit that and complete that code and change that code,
+
+02:45.290 --> 02:50.870
+which can be really beneficial as the cursor can move all around the file in a different place to solve
+
+02:50.870 --> 02:51.620
+issues.
+
+02:51.650 --> 02:57.890
+Additionally, I have it on trigger in comments and I've I also turned on auto import, which allows
+
+02:57.890 --> 03:02.120
+you to automatically add imports if you're using TypeScript or Python.
+
+03:02.150 --> 03:06.770
+The next thing that you'll want to make sure that is turned on is composer, which allows you to do
+
+03:06.800 --> 03:08.210
+multi file editing.
+
+03:08.240 --> 03:14.990
+I also recommend turning on always keep composer inbound and also command p for file picker and show
+
+03:14.990 --> 03:16.340
+suggested files.
+
+03:16.400 --> 03:19.640
+We'll come on to code based indexing in a future video.
+
+03:19.640 --> 03:21.410
+But for now we can leave that aside.
+
+03:21.410 --> 03:28.490
+You can easily add custom documentation which allows you to supplement the LLM with additional knowledge,
+
+03:28.490 --> 03:30.440
+just in case a new package has come out.
+
+03:30.440 --> 03:35.360
+And the LLM doesn't really know about that package that well, this can be a great way for you to add
+
+03:35.360 --> 03:39.050
+in extra information which will improve your code generation.
+
+03:39.050 --> 03:45.050
+For example, we can click add a new doc and then you can type in a doc reference here I've just chosen
+
+03:45.050 --> 03:49.010
+Lang Chain and you can see what will happen is it will try and find the prefix of that.
+
+03:49.010 --> 03:53.540
+And then after we then put that in, what it will do is it will then index that Information.
+
+03:53.570 --> 03:59.120
+Also, I'm just going to give it a unique name and then that documentation will be added in and indexed.
+
+03:59.150 --> 04:02.600
+Additionally, there's other things you can do with your custom documentation.
+
+04:02.600 --> 04:07.040
+So if you want to reindex the documentation, just hit the spinning arrow here.
+
+04:07.040 --> 04:09.320
+Also, as well as that, you can also delete docs.
+
+04:09.350 --> 04:15.590
+Now for the chat section I don't recommend turning on always search the web or fade chat stream or default
+
+04:15.620 --> 04:16.850
+node context.
+
+04:17.000 --> 04:23.330
+I do recommend having a narrow chat bar, auto scroll show, chat history show, suggested files, and
+
+04:23.330 --> 04:27.440
+I don't also have the collapse input box pills for the editor.
+
+04:27.440 --> 04:33.500
+I always choose to show that as an editor tooltip, and also I recommend passing the inline edit links,
+
+04:33.500 --> 04:37.400
+which will automatically pass links when you pass them in with the command K.
+
+04:37.430 --> 04:40.040
+Also do have auto select on for the terminal.
+
+04:40.040 --> 04:44.720
+I recommend having the terminal hint on and also show terminal hover hint for the beta section.
+
+04:44.720 --> 04:47.810
+Turn all of these on and we'll explore them in future lessons.
+
+04:47.810 --> 04:51.770
+In the next video, you're going to learn about how you can easily download all of the course content
+
+04:51.770 --> 04:52.430
+via GitHub.

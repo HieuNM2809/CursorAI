@@ -1,0 +1,229 @@
+WEBVTT
+
+00:00.020 --> 00:00.800
+Hey welcome back.
+
+00:00.830 --> 00:03.230
+In this video we're going to look at a tool called better dictation.
+
+00:03.230 --> 00:05.420
+This is a tool that's a single purchase.
+
+00:05.420 --> 00:11.270
+And then it will use a localized open source model called whisper, which is built by OpenAI so that
+
+00:11.270 --> 00:14.270
+you can use transcription for free after doing one purchase.
+
+00:14.270 --> 00:19.400
+I'd really recommend on buying this tool, because you can use this dictation directly inside any input
+
+00:19.400 --> 00:22.280
+box, either in the chat window or inside a composer.
+
+00:22.280 --> 00:27.350
+Let's have a look at how we can use this dictation tool to streamline the work of your development process.
+
+00:27.830 --> 00:30.350
+All right, so I'm in a new project inside of cursor.
+
+00:30.350 --> 00:32.660
+And what we're going to use is the better dictation tool.
+
+00:32.660 --> 00:33.830
+So I'm going to hit command shift.
+
+00:33.830 --> 00:35.600
+And I'm going to load up a cursor window.
+
+00:35.600 --> 00:40.610
+And then I'm going to actually use better dictation to talk directly to composer I want to build a full
+
+00:40.640 --> 00:45.470
+stack web application that uses to do lists on the fast API backend.
+
+00:45.470 --> 00:50.150
+And then for the front end of the side of the application, I'd like to use an index.html file.
+
+00:50.150 --> 00:54.170
+We want to be able to add, remove, update and delete to do's.
+
+00:54.200 --> 00:56.870
+Can you make this a really super dope program?
+
+00:56.870 --> 00:58.070
+Let's go and there you go.
+
+00:58.070 --> 01:02.780
+So basically we've just got the ability to directly talk to composer using dictation.
+
+01:02.780 --> 01:06.950
+You can also do the exact same thing inside the chat box or inside the inline edits.
+
+01:06.950 --> 01:08.900
+So now I've got this application.
+
+01:08.930 --> 01:13.100
+The other thing we might want to do is we might want to also make it into a SQLite database.
+
+01:13.100 --> 01:19.470
+So I'm going to also then go and accept all these changes and then say, can you make this into a SQLite
+
+01:19.500 --> 01:22.260
+database and show me how to run this web application?
+
+01:24.840 --> 01:25.950
+And there we go again.
+
+01:25.980 --> 01:27.360
+We're dictating to cursor.
+
+01:27.360 --> 01:31.830
+And composer is now doing its stuff and it's rewriting the Main.py file.
+
+01:31.860 --> 01:34.260
+And you can see here it's doing some updates.
+
+01:34.320 --> 01:36.750
+It's also told us that we need to install these things.
+
+01:36.750 --> 01:39.000
+I'm now going to go and have a look here.
+
+01:39.000 --> 01:39.750
+So what have we got.
+
+01:39.780 --> 01:41.460
+We've got a fast API.
+
+01:41.490 --> 01:44.340
+Let's run these Pip installs and make sure we have everything.
+
+01:44.340 --> 01:48.990
+So I'm just going to go to an integrated terminal and we're going to run all those.
+
+01:49.080 --> 01:50.070
+Let's have a look.
+
+01:50.100 --> 01:51.150
+Let's see.
+
+01:51.180 --> 01:53.280
+We need to load Uvicorn.
+
+01:55.140 --> 01:56.670
+So I'm going to load that.
+
+01:58.140 --> 02:01.920
+And I'm going to go to this web page and have a look at this web page isn't exactly what we're looking
+
+02:01.920 --> 02:02.070
+for.
+
+02:02.100 --> 02:02.880
+It's not found.
+
+02:02.880 --> 02:07.380
+So we're going to go directly back into cursor and work exactly the same way that we've been doing before,
+
+02:07.380 --> 02:12.060
+where we're basically just going to tell it what's wrong and see what it recommends to fix the code.
+
+02:14.730 --> 02:17.640
+Currently, I'm getting a 404 page not found.
+
+02:17.640 --> 02:21.150
+And also I'd like to make sure that this application is working functionally.
+
+02:21.150 --> 02:22.650
+Please can you help with this?
+
+02:26.160 --> 02:29.460
+And you can see that the transcription isn't exactly what we're looking for.
+
+02:29.490 --> 02:33.320
+But in the rough general scheme of things, we have got the ability to do this.
+
+02:33.320 --> 02:34.460
+So let's have a look now.
+
+02:34.460 --> 02:36.590
+So we're going to go and accept all those changes.
+
+02:36.590 --> 02:39.530
+Then we're going to restart the web server and have a look at that.
+
+02:39.530 --> 02:41.690
+So we've got this to do web page.
+
+02:41.690 --> 02:44.270
+But when I'm adding it to do I'm running into the same error.
+
+02:44.270 --> 02:50.900
+We've got some 42 Unprocessable entity, which is telling me that the input to a specific row is not
+
+02:50.900 --> 02:51.650
+actually correct.
+
+02:51.650 --> 02:53.480
+So let's have a look at how we could fix this.
+
+02:53.510 --> 02:57.500
+So I'm going to get Python to fix any of these main.py errors inside of cursor.
+
+02:57.500 --> 03:03.110
+So I'm going to click on Main.py, click copy, go to composer and then paste those in.
+
+03:03.140 --> 03:09.110
+It's not working and we're just telling composer exactly what the problem is inside of VSCode.
+
+03:09.110 --> 03:11.420
+And the add to do doesn't work at the moment.
+
+03:11.420 --> 03:13.190
+It's updating this creating that table.
+
+03:13.190 --> 03:16.400
+So you've got the to dos, create, update and delete.
+
+03:17.150 --> 03:21.230
+And it's also adding the index file to fix the add to do as well.
+
+03:21.230 --> 03:23.210
+So we'll just wait for composer to finish.
+
+03:23.210 --> 03:26.270
+It's making that main.py and the index.html.
+
+03:26.360 --> 03:28.850
+And again you can mix dictation with typing.
+
+03:28.850 --> 03:31.760
+So hopefully this gives you a feel for that Let's look at that.
+
+03:31.760 --> 03:32.090
+All right.
+
+03:32.090 --> 03:32.360
+Cool.
+
+03:32.360 --> 03:34.910
+So it looks like that works I can add to dos.
+
+03:35.810 --> 03:37.520
+And they look like they persist.
+
+03:37.520 --> 03:39.350
+And I can also cross them off.
+
+03:39.380 --> 03:40.490
+Can I delete them.
+
+03:40.520 --> 03:41.750
+I can indeed delete them.
+
+03:41.750 --> 03:43.490
+So we've managed to do that at under four minutes.
+
+03:43.490 --> 03:49.100
+So hopefully this shows you the power of combining dictation with tools like Cursor Composer.

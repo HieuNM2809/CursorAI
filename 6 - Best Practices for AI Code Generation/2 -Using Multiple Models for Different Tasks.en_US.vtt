@@ -1,0 +1,256 @@
+WEBVTT
+
+00:00.050 --> 00:00.380
+Hey.
+
+00:00.380 --> 00:04.250
+And in this video, we're going to have a look at how you can use different types of models for different
+
+00:04.250 --> 00:05.930
+tasks inside of cursor.
+
+00:05.960 --> 00:09.710
+This is a really great way of achieving state of the art results.
+
+00:09.710 --> 00:13.160
+So we're going to use the oh one preview model for task planning.
+
+00:13.160 --> 00:19.100
+We'll then use clause 3.5 sonnet for actually generating the code given the tasks that have been planned.
+
+00:19.130 --> 00:23.150
+Now, the reason why you might want to do this is that certain models are actually better for chain
+
+00:23.180 --> 00:24.140
+of thought reasoning.
+
+00:24.140 --> 00:29.420
+So for example, oh one preview that recently came out from OpenAI is a really good model for that.
+
+00:29.420 --> 00:33.740
+However, Claude 3.5 sonnet is actually better at generating code.
+
+00:33.740 --> 00:39.980
+Okay, so I'm going to add a markdown file to this Udemy video, and also inside of the GitHub repository
+
+00:39.980 --> 00:41.720
+under the useful prompts folder.
+
+00:41.720 --> 00:44.030
+It's called a documentation of steps prompt.
+
+00:44.030 --> 00:50.540
+And basically you can use this to enable oh one preview to document and task plan all of the steps that
+
+00:50.540 --> 00:53.120
+you're going to need to build out any full stack application.
+
+00:53.120 --> 00:54.770
+Let's have a look at how you'll use this.
+
+00:54.770 --> 00:55.790
+Using composer.
+
+00:55.790 --> 00:58.580
+We're going to load command shift I or control shift I.
+
+00:58.580 --> 01:00.920
+And then we're going to then paste this prompt in.
+
+01:00.920 --> 01:02.450
+And you can see we've got this.
+
+01:02.450 --> 01:06.170
+Generate a detailed list of documentation tasks for a web application project.
+
+01:06.200 --> 01:11.150
+We talk about the routes, the page layouts, reusable components, the state management approach,
+
+01:11.150 --> 01:13.340
+and then we can also then put our application in.
+
+01:13.340 --> 01:16.730
+So let's imagine you want to build a pixel art generator.
+
+01:16.730 --> 01:24.980
+On the client side you could say the application is a pixel art generator only on the client side.
+
+01:25.910 --> 01:32.570
+And then in the bottom right hand corner of this, change this from clause 3.5 sonnet to zero one preview
+
+01:32.570 --> 01:33.650
+and hit enter.
+
+01:33.680 --> 01:39.260
+Now, just to give you a bit of warning, it will take up to around 60s to get a response from zero
+
+01:39.260 --> 01:40.010
+one preview.
+
+01:40.040 --> 01:44.630
+Now the reason why this is taking longer is because zero one preview is a chain of thought reasoning
+
+01:44.630 --> 01:45.080
+model.
+
+01:45.080 --> 01:51.110
+It will generate hidden tokens and it will try and come up with a better reasoning path for doing your
+
+01:51.110 --> 01:51.440
+task.
+
+01:51.440 --> 01:55.310
+What this means is you get a really good plan using this prompt.
+
+01:55.310 --> 02:00.680
+Then you can use that same plan later on with a better model for code generation like sonnet.
+
+02:00.680 --> 02:03.770
+So after about a minute or so, we've got a couple of different routes.
+
+02:03.770 --> 02:07.940
+So you can see we've got the toolbar components, the canvas area color picker and an export and save
+
+02:07.940 --> 02:08.360
+options.
+
+02:08.360 --> 02:10.520
+We've got a list of reusable components.
+
+02:10.550 --> 02:14.600
+We also have a state management approach, have some API endpoints as well.
+
+02:14.600 --> 02:17.840
+Also asks if we want to have a database schema and authentication.
+
+02:17.840 --> 02:19.760
+So I'm going to click Accept All.
+
+02:19.760 --> 02:24.800
+And then what you'll see is now we've got a new markdown file called App Documentation tasks.
+
+02:24.830 --> 02:29.900
+Then what you can do is in any of your projects you can for example, load a new Next.js application
+
+02:29.900 --> 02:34.940
+and you can bundle that with Shadchan by running Npx Shadchan at latest in it.
+
+02:34.940 --> 02:39.710
+This will then say, okay, there isn't a package.json, so I'm going to hit y for it to create one.
+
+02:39.710 --> 02:40.940
+I'll call it my app.
+
+02:40.940 --> 02:44.780
+It will create a Next.js application with the My App folder.
+
+02:44.810 --> 02:48.530
+Now what I'd recommend doing is also creating a cursor rules.
+
+02:48.530 --> 02:50.900
+So we're going to go and do a cursor rules file.
+
+02:50.900 --> 02:57.950
+And then I'm going to recommend you navigate to cursor dot directory and copy the top left one for TypeScript.
+
+02:57.950 --> 03:03.650
+So the one that says you're an expert in Next.js app, router, react, CNY, radix UI and tailwind.
+
+03:03.650 --> 03:08.420
+And if you're accessing this content via the GitHub repository, then this will already be inside of
+
+03:08.450 --> 03:12.290
+that folder I've gone through and hit enter on all of the defaults for Shadchan.
+
+03:12.320 --> 03:18.740
+We now also have a cursor rules file that talks about how it wants to use Next.js app, router react,
+
+03:18.740 --> 03:20.810
+Shadchan UI, and radix UI as well.
+
+03:20.840 --> 03:26.060
+Now, when you're building and composer with these task plans, I find that composer works the best
+
+03:26.060 --> 03:27.590
+when you do it inside the folder.
+
+03:27.590 --> 03:33.740
+So what I'd recommend doing is copying these three files and putting them inside of your app, and then
+
+03:33.740 --> 03:35.900
+open the app by going to the top left.
+
+03:35.900 --> 03:39.770
+Click on open in the file and then going into your app.
+
+03:39.830 --> 03:46.970
+And then from here to utilize this plan that we've now got where we have a app documentation tasks.
+
+03:46.970 --> 03:58.070
+We could for example say at app documentation tasks, I want you to build all of the files to execute
+
+03:58.070 --> 03:59.120
+this plan.
+
+03:59.150 --> 04:05.210
+Be very thorough and make sure to create each file okay.
+
+04:05.210 --> 04:10.790
+And then go back down into the bottom right corner and click back into Claude.
+
+04:10.820 --> 04:11.870
+3.5 sonnet.
+
+04:11.870 --> 04:17.290
+So we're using One model for task creation and planning, which is oh one preview.
+
+04:17.290 --> 04:22.360
+But then when we actually generate the code, we're referencing the markdown file that the reasoning
+
+04:22.360 --> 04:23.290
+model created.
+
+04:23.290 --> 04:27.220
+And then it's also then going to generate all the actual files using sonnet.
+
+04:27.220 --> 04:31.390
+So we can get the best of both worlds where we can generate a really thorough and detailed plan.
+
+04:31.390 --> 04:35.260
+But we actually use sonnet for writing all of the code for the pages and components.
+
+04:35.260 --> 04:39.640
+As you can see, because we've generated an incredibly detailed plan, composer is actually doing a
+
+04:39.640 --> 04:41.560
+lot more work than it usually would for us.
+
+04:41.560 --> 04:43.450
+Hopefully you found this technique useful.
+
+04:43.450 --> 04:49.150
+This technique makes use of a reasoning model to do the planning, whilst also relying on the best model
+
+04:49.150 --> 04:50.380
+for code generation.
+
+04:50.380 --> 04:55.270
+Some extra things that you can do as well is also ask the oh one preview model to refine its previous
+
+04:55.270 --> 05:01.420
+plan, and also you could change the plan prompt that creates the plan to make it more aligned and suited
+
+05:01.420 --> 05:03.640
+to your preferred directory and project structure.
+
+05:03.640 --> 05:08.320
+In the next video, we'll have a look at how you can easily identify what is the best code generation
+
+05:08.320 --> 05:09.880
+model at any given time.
+
+05:09.880 --> 05:14.710
+This will allow you within another timeframe, such as 3 or 6 months, to review the code generation
+
+05:14.710 --> 05:17.620
+models, and therefore you can always keep using the best model available.

@@ -1,0 +1,517 @@
+WEBVTT
+
+00:00.000 --> 00:03.750
+In this video, we're going to have a whistle stop tour of all the different types of features that
+
+00:03.750 --> 00:05.790
+you can play around inside of cursor.
+
+00:05.790 --> 00:09.090
+So the first one we're going to have a look at is tab completion.
+
+00:09.120 --> 00:14.070
+Tab completion basically allows you to pick a bit of the code and just hit tab.
+
+00:14.070 --> 00:16.950
+And then it will generate some different types of autocomplete.
+
+00:16.950 --> 00:20.160
+One thing that I really like to get going with this is some comments.
+
+00:20.160 --> 00:24.330
+So I can say you could add some comments above, improve my function.
+
+00:24.360 --> 00:29.640
+And then if you see here we've got a print and we could say use Asyncio.
+
+00:29.640 --> 00:34.920
+And then here we have our first instance of Tab complete which is being driven by comments.
+
+00:34.920 --> 00:38.880
+So if I hit tab what happens is we've now got another error.
+
+00:38.880 --> 00:40.770
+If you see here with the print hello world.
+
+00:40.800 --> 00:45.990
+So if I hit tab again and I just go down and have a look, we should even be able to just basically
+
+00:45.990 --> 00:46.950
+keep tabbing.
+
+00:46.950 --> 00:48.570
+And you can see Tab tab.
+
+00:48.570 --> 00:52.470
+And what's happening here is the ability to keep improving the code.
+
+00:52.470 --> 00:54.420
+Now this was the first thing.
+
+00:54.420 --> 00:56.940
+And obviously you could see there was a lot going on there.
+
+00:56.940 --> 01:02.710
+It was removing things as and when we choose and you can see here again we've got this async run and
+
+01:02.710 --> 01:04.390
+it's telling us it should go inside of here.
+
+01:04.390 --> 01:07.840
+And again if we hit tab it's also going to remove this line here.
+
+01:07.840 --> 01:09.940
+So you can basically keep hitting tab.
+
+01:09.940 --> 01:12.910
+And it will improve the code where it thinks it needs to.
+
+01:12.940 --> 01:15.220
+So now we've made the function asynchronous.
+
+01:15.460 --> 01:19.360
+And we kick started all of this process by using a Python comment.
+
+01:19.390 --> 01:25.780
+Now that's the first kind of major feature of cursor is that the tab will actually move around the code.
+
+01:25.780 --> 01:31.000
+So rather than you have to click and then tab and click and then tab, you can basically just keep hitting
+
+01:31.030 --> 01:31.570
+tab.
+
+01:31.570 --> 01:33.700
+And cursor will delete parts of the code.
+
+01:33.700 --> 01:35.620
+It will rewrite parts of the code.
+
+01:35.620 --> 01:38.830
+It will move your cursor to where it thinks it needs to go.
+
+01:38.830 --> 01:41.830
+So that's the improvement that it has over GitHub copilot.
+
+01:41.860 --> 01:47.830
+Now the second feature I'm going to show you is the command k feature, which is mainly used for inline
+
+01:47.830 --> 01:48.250
+edits.
+
+01:48.250 --> 01:52.210
+So we could select a portion of the code such as async def test.
+
+01:52.210 --> 01:53.950
+And you can see here that it highlights.
+
+01:53.950 --> 01:57.790
+And we can either go into a chat or we can go and add to edit.
+
+01:57.820 --> 02:02.980
+Now if we're going into an add ad edit, I can hit command K or that will be control K on windows.
+
+02:03.010 --> 02:08.410
+Now we have the option to decide what model we're using, and I would recommend always sticking for
+
+02:08.410 --> 02:10.540
+now with Claude 3.5 sonnet.
+
+02:11.290 --> 02:20.230
+After this we could say rewrite my function to have proper docstrings and also to return.
+
+02:20.260 --> 02:22.060
+And I'll just make sure this is correct.
+
+02:22.090 --> 02:22.960
+Hello world.
+
+02:22.960 --> 02:28.630
+And then when we click enter and after submitting that edit it then comes with a suggestion.
+
+02:28.630 --> 02:32.680
+And you can see on the right here can you see we've got this green or the red.
+
+02:32.680 --> 02:36.760
+And we can either do command y to basically accept the edit.
+
+02:36.760 --> 02:43.180
+So if I do command y we can accept that edit or if I hit command n it would reject that edit as well
+
+02:43.180 --> 02:48.880
+as that you can also hit over here click on this which is command enter or Control enter.
+
+02:48.880 --> 02:50.560
+And that will accept all of the edits.
+
+02:50.590 --> 02:51.310
+Okay cool.
+
+02:51.310 --> 02:56.950
+The next thing I want to do is show you that if we go back to this, we can also add follow up instructions
+
+02:56.950 --> 03:00.860
+with command shift K or control shift K on windows.
+
+03:00.860 --> 03:10.910
+And then we can say, I also want you to make the function even better and allow the user to add their
+
+03:10.910 --> 03:11.600
+name.
+
+03:14.900 --> 03:17.780
+And then again we can hit enter to submit that.
+
+03:17.780 --> 03:22.940
+And then again we've now improved the follow up instructions.
+
+03:22.970 --> 03:24.710
+So I'm going to click into the code.
+
+03:24.710 --> 03:29.000
+And then I'm going to hit command Y to accept that change okay great.
+
+03:29.000 --> 03:31.370
+So that's the second feature that we had.
+
+03:31.370 --> 03:36.410
+The third feature that you're going to want to have a look at in cursor is the chat feature.
+
+03:36.410 --> 03:44.600
+So how do we use the chat feature to get to that you can hit command L on Mac or control L on windows.
+
+03:44.600 --> 03:48.260
+This will bring up a chat window that you can see on the right hand side.
+
+03:48.260 --> 03:53.750
+Now what's interesting about the chat and also the inline edits is you can also add files.
+
+03:53.750 --> 03:59.860
+So for example you can see we currently have the main file selected, which is main.py.
+
+03:59.890 --> 04:04.840
+But we could also add additional files here so I could add the cursor rules file.
+
+04:04.870 --> 04:14.800
+Then I can say I want you to generate three more functions that showcase improving the code and also
+
+04:14.800 --> 04:17.620
+adding some additional tests.
+
+04:18.460 --> 04:21.970
+And then what we can do is at the moment we can hit enter.
+
+04:22.930 --> 04:26.410
+Now what happens is the code doesn't get applied inline.
+
+04:26.410 --> 04:33.850
+However, we can see something like this where we now have a bit of code that is being generated by
+
+04:33.850 --> 04:35.020
+the chat window.
+
+04:35.050 --> 04:39.100
+Now we have the ability to either ask, copy the code or apply.
+
+04:39.100 --> 04:42.970
+If we copy the code, you could do something like this and you could paste it.
+
+04:42.970 --> 04:45.400
+Or if you wanted you could hit apply.
+
+04:45.400 --> 04:51.550
+And then you can just accept all of them or reject all of them with these two buttons here.
+
+04:51.550 --> 04:59.130
+So I can click accept or I can click reject here, or I can individually Update and just select different
+
+04:59.160 --> 05:01.890
+types of these with the Y or the no.
+
+05:01.920 --> 05:03.300
+So you have a couple of options there.
+
+05:03.330 --> 05:08.700
+Probably the one you're most likely use is if you just click apply and then you're going to click accept.
+
+05:08.730 --> 05:09.090
+Yeah.
+
+05:09.120 --> 05:15.510
+And that's going to be the easy way of getting code directly from your chat window into your Python
+
+05:15.510 --> 05:19.410
+files or TypeScript files or whatever programming language you're designed to use.
+
+05:19.440 --> 05:24.300
+Now another thing we can do is we can generate multiple files using the chat window UI.
+
+05:24.750 --> 05:27.720
+And so you can see here it's saying all tests passed successfully.
+
+05:27.750 --> 05:33.120
+In future videos we'll have a look at how you can do file and folder references, and also how we can
+
+05:33.120 --> 05:36.210
+pull in custom documentation directly into the chat window.
+
+05:36.240 --> 05:39.060
+There's lots of other things that are nice to know about as well.
+
+05:39.060 --> 05:40.980
+So for example you can get chat history.
+
+05:41.010 --> 05:43.170
+You can also open the chat in the editor.
+
+05:43.200 --> 05:48.150
+The final thing that we're going to have a look at, just briefly, as a feature of cursor, is one
+
+05:48.150 --> 05:53.100
+that's really stood out against other different types of editors, such as VSCode and the GitHub copilot
+
+05:53.100 --> 05:55.290
+setup, which is called composer.
+
+05:55.320 --> 06:01.980
+Now, Our composer is a way for you to do multi file editing, creation of files and also deletion of
+
+06:01.980 --> 06:02.430
+files.
+
+06:02.430 --> 06:08.850
+To load composer you can just hit Command shift I if you're on Mac or if you're on windows you can hit
+
+06:08.850 --> 06:10.050
+ctrl shift I.
+
+06:10.080 --> 06:11.670
+But perhaps you don't have that.
+
+06:11.670 --> 06:16.290
+So what you can do is you can load it back into a floating window like this.
+
+06:16.290 --> 06:19.080
+So you can see here this is the floating window.
+
+06:19.080 --> 06:23.070
+And then you can load the open control panel like this.
+
+06:23.100 --> 06:33.120
+Now once you've loaded the control panel, let's say I want to create a to do full stack list application
+
+06:33.570 --> 06:36.960
+using an index.html web page.
+
+06:36.960 --> 06:38.550
+And we can just hit enter.
+
+06:38.550 --> 06:44.730
+And then what the composer feature is going to do is it's going to decide on exactly the right files
+
+06:44.730 --> 06:48.300
+and folders that need to be created in order for us to achieve this goal.
+
+06:48.300 --> 06:53.700
+It's a lot more like working as a technical product manager where you're aware of the implementation,
+
+06:53.700 --> 06:55.490
+but you're not necessarily writing it.
+
+06:55.490 --> 07:01.820
+Now, if you look on, the top left, composer has decided to create both a main.py and an index.html
+
+07:01.820 --> 07:02.360
+file.
+
+07:02.360 --> 07:07.880
+We can then click Accept All in the bottom right, which will then actually create or edit or delete
+
+07:07.880 --> 07:09.860
+all of those files in one go.
+
+07:09.890 --> 07:16.610
+That's the real power of composer is it really allows for true multi file editing, updating or deleting
+
+07:16.610 --> 07:17.510
+or creating.
+
+07:17.510 --> 07:21.440
+So now we can close the composer window and we'll let's go down here.
+
+07:21.440 --> 07:25.520
+And then we can see we now have a static folder with an index.html.
+
+07:25.520 --> 07:27.440
+And we have a main.py.
+
+07:27.470 --> 07:32.330
+If we go back to the composer window if you have a look, it also shows us how to run the application
+
+07:32.360 --> 07:33.500
+on the right hand side.
+
+07:33.500 --> 07:38.030
+So we have a uvicorn main.py reload.
+
+07:38.030 --> 07:41.810
+So all I can do is just run this command and then let's have a look at that.
+
+07:41.810 --> 07:42.890
+So this will be here.
+
+07:42.890 --> 07:45.410
+So we can actually run it with Main.py as well.
+
+07:45.410 --> 07:50.030
+If we wanted Python Main.py would also run this given that it's a Uvicorn app.
+
+07:50.030 --> 07:52.460
+And then let's have a look at that in the browser window.
+
+07:52.460 --> 07:57.430
+Now you'll see at the moment the message that we get back is this to do API is running, but we haven't
+
+07:57.460 --> 08:01.930
+actually got our different types of to dos as a rendered HTML web page.
+
+08:01.930 --> 08:07.570
+So what we can do is we can go back into cursor and try and debug and fix this application code using
+
+08:07.570 --> 08:08.230
+composer.
+
+08:08.230 --> 08:15.580
+So again we'll hit Command shift I, we'll go back into our composer window and say I went to the home
+
+08:15.610 --> 08:20.560
+page, but I couldn't see my to do list items.
+
+08:20.590 --> 08:22.390
+Can you fix the code?
+
+08:23.830 --> 08:29.740
+And then what we're going to do is it's telling us that there was an issue specifically with the App.get.
+
+08:29.770 --> 08:34.630
+It should have returned a file response serving the static slash index.html.
+
+08:34.630 --> 08:39.010
+We can now click accept all and then after that, then we should go and have a look.
+
+08:39.040 --> 08:45.160
+And if we look at the main.py, you'll see that it has now been updated for this app.get on the forward
+
+08:45.160 --> 08:45.790
+slash.
+
+08:45.790 --> 08:50.710
+Now, if we then go and reload the web server and have a look, we can now see the to do list, which
+
+08:50.710 --> 08:51.250
+is great.
+
+08:51.250 --> 08:52.810
+So I could add some to do's.
+
+08:52.810 --> 08:56.790
+So you know James is coding and having fun.
+
+08:59.220 --> 09:04.890
+And then also I could say I want to learn more about cursor.
+
+09:05.460 --> 09:08.700
+Now other things we could do is we could also edit the code.
+
+09:08.910 --> 09:10.860
+So again I'll load the composer.
+
+09:10.860 --> 09:18.630
+So command shift I and then I'll say I want you to improve the output of the to do list.
+
+09:18.630 --> 09:25.710
+Add styling and allow for multi multi edit delete.
+
+09:25.710 --> 09:30.330
+Also I really want to make this to do list application.
+
+09:30.330 --> 09:31.080
+Great.
+
+09:31.080 --> 09:39.630
+And we'll also say can you also add a confirmation for when a user is about to delete an item.
+
+09:39.750 --> 09:40.380
+And then.
+
+09:40.380 --> 09:42.060
+So we're giving a couple of different things.
+
+09:42.060 --> 09:47.640
+And then inside of that it's now rewriting the index.html page with some additional styles.
+
+09:47.910 --> 09:53.070
+And then as well as that we are also going to potentially change part of the main.py file.
+
+09:53.070 --> 09:57.950
+So you can see here we're adding some different JavaScript functions that allow us to talk to our API.
+
+09:58.040 --> 10:00.860
+And it's decided to add all of these different things.
+
+10:01.430 --> 10:03.350
+And then we can click Accept all.
+
+10:03.380 --> 10:05.450
+Now I'm going to close the composer window.
+
+10:05.450 --> 10:08.420
+You could either close it in the top right or you can just hit escape.
+
+10:08.420 --> 10:10.040
+That would also work as well.
+
+10:10.460 --> 10:13.880
+I'm going to rerun the web server and now we've got an advanced to do list.
+
+10:13.880 --> 10:14.510
+So let's have a go.
+
+10:14.510 --> 10:18.200
+So James is having fun with cursor.
+
+10:18.260 --> 10:21.740
+And then we could also add going for a walk.
+
+10:22.640 --> 10:25.520
+And then we could also see we can delete the selected.
+
+10:25.520 --> 10:29.000
+Are you sure you want to delete two to do's I am which is great.
+
+10:29.150 --> 10:36.530
+Or we could say I also want to learn how to have fun and we could just try and do a single delete.
+
+10:36.530 --> 10:38.390
+So are you sure you want to delete this to do?
+
+10:38.420 --> 10:39.380
+Yes I am.
+
+10:39.680 --> 10:44.150
+So as you can see here, we've been able to easily add lots of different files.
+
+10:44.180 --> 10:44.780
+All right.
+
+10:44.780 --> 10:50.120
+In the next section we're going to have a look at how you can really master using cursors tab autocomplete
+
+10:50.120 --> 10:51.710
+and prediction capabilities.
+
+10:51.710 --> 10:52.220
+Cool.
+
+10:52.250 --> 10:53.210
+I'll see you in the next one.

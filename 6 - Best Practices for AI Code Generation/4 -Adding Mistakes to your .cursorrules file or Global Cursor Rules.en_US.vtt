@@ -1,0 +1,79 @@
+WEBVTT
+
+00:00.020 --> 00:04.550
+A common mistake that you'll run into when you're building full stack web applications with an IDE like
+
+00:04.550 --> 00:05.090
+cursor.
+
+00:05.090 --> 00:09.470
+Sometimes it won't produce the react components or the functions in your preferred style.
+
+00:09.470 --> 00:14.810
+The easy way to fix this is to make sure that as you encounter these errors or mistakes throughout your
+
+00:14.810 --> 00:19.370
+development workflow, to continually add these to the cursor rules file.
+
+00:19.370 --> 00:20.570
+So think of it like this.
+
+00:20.570 --> 00:26.450
+Whenever a cursor makes a mistake, you log that mistake in the cursor rules file, either locally for
+
+00:26.480 --> 00:32.120
+a project or globally in your cursor settings, and then over time, your cursor rules file becomes
+
+00:32.120 --> 00:38.390
+an extension of how you like to code and what types of preferred ways of styling you have for your functionality.
+
+00:38.390 --> 00:42.140
+This means that you're less likely to experiencing styling errors in the future.
+
+00:42.140 --> 00:45.620
+Let's demo this by building a react component inside of a page.
+
+00:45.620 --> 00:47.390
+So we've got an XJS application here.
+
+00:47.390 --> 00:49.250
+We've got a page dot TSX.
+
+00:49.280 --> 00:53.990
+Let's also say generate a Hello World component.
+
+00:54.710 --> 00:56.480
+And we've just used command K for this.
+
+00:56.480 --> 00:59.780
+And we can see here I've actually got a React.fc.
+
+00:59.780 --> 01:01.850
+This is a good example of good styling.
+
+01:01.850 --> 01:05.240
+Let's say we wanted to have all of our exports with export const.
+
+01:05.270 --> 01:08.030
+We could do that by updating the cursor rules okay.
+
+01:08.060 --> 01:09.740
+So we've updated the cursor rules.
+
+01:09.740 --> 01:17.690
+So giving a bad example with an export default and a good example with a return with the export const.
+
+01:17.720 --> 01:22.670
+Now we're going to try and recreate that Hello World component inside of the page TSX.
+
+01:22.670 --> 01:29.300
+So we're just going to go here and say make a new Hello World component and export it.
+
+01:32.390 --> 01:36.770
+So now you can see that cursor is immediately following our cursor rules file.
+
+01:36.770 --> 01:41.150
+So as you run into styling errors whilst you're developing your applications, add these incrementally
+
+01:41.150 --> 01:43.640
+to cursor rules so that you can avoid them in the future.

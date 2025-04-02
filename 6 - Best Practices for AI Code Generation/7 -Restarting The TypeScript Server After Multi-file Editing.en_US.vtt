@@ -1,0 +1,58 @@
+WEBVTT
+
+00:00.020 --> 00:04.880
+This is just a quick video showing you how sometimes when you use composer, some of the file imports
+
+00:04.910 --> 00:07.310
+can get messed up inside of your TypeScript server.
+
+00:07.340 --> 00:12.170
+You can see here, for example we have this at components slash welcome message.
+
+00:12.170 --> 00:16.430
+Now we can clearly see that the welcome message does exist inside of this components folder.
+
+00:16.460 --> 00:20.720
+Yet we're still getting a cannot find module error inside of the TypeScript server.
+
+00:20.750 --> 00:26.810
+What you can do is when you've built a lot of files or folders using composer, restart your TypeScript
+
+00:26.810 --> 00:27.080
+server.
+
+00:27.080 --> 00:30.590
+Then you can actually find out what are the true errors inside of your project.
+
+00:30.590 --> 00:33.500
+You don't have to close cursor or VS code to do this.
+
+00:33.500 --> 00:36.170
+You can actually do this inside of cursor.
+
+00:36.170 --> 00:40.370
+So just hit Command shift P or Control shift P on windows.
+
+00:40.370 --> 00:41.960
+Then you can type TypeScript.
+
+00:41.960 --> 00:46.640
+Then just hit enter on your keyboard which will restart the TypeScript server.
+
+00:46.640 --> 00:49.130
+And now you can see that that error message has gone away.
+
+00:49.130 --> 00:51.980
+And welcome message did actually exist inside of the application.
+
+00:51.980 --> 00:56.900
+You'll want to do this when you create a lot of files in composer to really figure out which modules
+
+00:56.900 --> 00:58.520
+are actually giving you errors.
+
+00:58.550 --> 00:59.000
+Cool.
+
+00:59.030 --> 01:00.050
+I'll see you in the next video.
